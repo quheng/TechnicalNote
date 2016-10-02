@@ -14,3 +14,7 @@
 3. 将mysql-connect-java.jar 放入$HIVE_HOME/libexec/lib
 4. 复制$HIVE_HOME/libexec/conf文件夹下的hive-default.xml 为hive-site.xml, 并根据需求进行配置
 5. `hive`
+
+## command
+1. `hive -e "select * from table";` 执行单行查询
+2. `hive -f hql_file.hql`  执行文件内语句
