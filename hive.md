@@ -1,6 +1,6 @@
 # Hive 
 
-## install
+## Install
 1. `brew install hive`
 2. 配置metadata store
     1. `brew install mysql`
@@ -15,6 +15,26 @@
 4. 复制$HIVE_HOME/libexec/conf文件夹下的hive-default.xml 为hive-site.xml, 并根据需求进行配置
 5. `hive`
 
-## command
+## Command
 1. `hive -e "select * from table";` 执行单行查询
 2. `hive -f hql_file.hql`  执行文件内语句
+3. `! pwd` 可以用!执行shell 命令
+
+## Table
+### managed table
+又叫做internal table. Hive 自己管理数据的生命周期, 但是和其他工具结合起来不是很方便
+
+### external table
+Hive本身不管理数据, e.g.
+
+```SQL
+CREATE EXTERNAL TABLE IF NOT EXISTS stocks (
+    name     STRING,
+    describe STRING,
+    price    INT
+)
+ROW FORMAT DELIMITED FIRLDS TERMINATED BY ','
+LOCATION '/data/stocks';
+``` 
+drop external table 并不会真的删除数据, 而是删除metadata.
+
