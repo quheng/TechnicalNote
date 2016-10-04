@@ -40,3 +40,14 @@ LOCATION '/data/stocks';
 ``` 
 drop external table 并不会真的删除数据, 而是删除metadata.
 
+
+## File Format
+`STORED AS format` 在创建表的时候指定数据格式
+
+### TextFile
+默认数据格式, 便于使用pig和Unix工具. 但是在空间占用上不如二进制文件.
+
+### SequenceFile
+二进制key-value. Hadoop 支持的标准格式, 便于使用Hadoop相关的工具处理, 但是Hadoop之外的工具使用起来就比较麻烦.
+
+
