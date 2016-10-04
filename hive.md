@@ -48,8 +48,8 @@ drop external table 并不会真的删除数据, 而是删除metadata.
 默认数据格式, 便于使用pig和Unix工具. 但是在空间占用上不如二进制文件.
 
 ### SequenceFile
-二进制key-value. Hadoop 支持的标准格式, 便于使用Hadoop相关的工具处理, 但是Hadoop之外的工具使用起来就比较麻烦. 可以方便的压缩在 block 和 record 级别压缩, 并支持以 block 划分文件用于并行处理.
+二进制 key-value. Hadoop 支持的标准格式, 便于使用Hadoop相关的工具处理, 但是Hadoop之外的工具使用起来就比较麻烦. 可以方便的压缩在 block 和 record 级别压缩, 并支持以 block 划分文件用于并行处理.
 
 ### RCFile
-
+RCFile 是 column-oriented 储存. 在列很多但是只查询其中几列的情况下效率很高. 此外列数据格式一致, 便于数据压缩. 
 
