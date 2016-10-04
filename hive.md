@@ -55,5 +55,5 @@ RCFile 是 column-oriented 储存. 在列很多但是只查询其中几列的情
 需要使用 Hive 提供的 rcfilecat 工具.
 
 ## Storage Handler
-使用外部数据作为Hive Table 数据
+使用外部数据作为 Hive Table 数据
 
