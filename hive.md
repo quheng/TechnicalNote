@@ -19,6 +19,8 @@
 1. `hive -e "select * from table";` 执行单行查询
 2. `hive -f hql_file.hql`  执行文件内语句
 3. `! pwd` 可以用!执行shell 命令
+4. `SHOW FUNCTIONS` 当前可用函数
+5. `DESCRIBE EXTENDED table_name` 展示详细表的信息
 
 ## Table
 ### managed table
