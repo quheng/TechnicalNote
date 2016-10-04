@@ -50,6 +50,6 @@ drop external table 并不会真的删除数据, 而是删除metadata.
 ### SequenceFile
 二进制key-value. Hadoop 支持的标准格式, 便于使用Hadoop相关的工具处理, 但是Hadoop之外的工具使用起来就比较麻烦. 可以方便的压缩在 block 和 record 级别压缩, 并支持以 block 划分文件用于并行处理.
 
- 
+### RCFile
 
 
