@@ -24,10 +24,12 @@
 
 ## Table
 ### managed table
-又叫做internal table. Hive 自己管理数据的生命周期, 但是和其他工具结合起来不是很方便
+又叫做internal table. Hive 自己管理数据的生命周期, 但是和其他工具结合起来不是很方便.
 
 ### external table
 Hive本身不管理数据, e.g.
+
+note: 在aws emr 中 internal table 也可以指定 location, 主要的区别在于 internal table drop 之后会将数据一起删掉.
 
 ```SQL
 CREATE EXTERNAL TABLE IF NOT EXISTS stocks (
