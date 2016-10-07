@@ -7,4 +7,5 @@
 * [Docker](docker.md)
 * [Vim](vim.md)
 * [presto](presti.md)
+* Haskell
 
