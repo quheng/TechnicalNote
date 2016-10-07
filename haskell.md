@@ -26,4 +26,4 @@ else part is mandatory, 因为 if 语句在 是一个表达式, 而表达式在H
 将一个元素放在一个list的开头, e.g. 'a' + "bcd" 得到 "abcd"
 
 ### !!
-获取 list 中的元素, e.g. "abcdefg" !! 1 得到b. Haskell 也是从 0 开始数数的. 
+获取 list 中的元素, e.g. "abcdefg" !! 1 得到b. Haskell 也是从 0 开始数数的. 访问大于 list 大小的元素会Exception `index too large`.
