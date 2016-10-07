@@ -76,6 +76,7 @@ e.g.
 ## tuple
 1. 固定大小
 2. 可存放不同类型元素
+note: tuple 不能只有一个元素, e.g. (1) -> 1
 
 ### useful function
 1. fst
