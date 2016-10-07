@@ -114,5 +114,5 @@ test "test string"
 test_guard a b | c == 1 = "1"
                | c == 2 = "2"
                | otherwise = "1 nor 2"
-               | where c = a/b
+               where c = a/b
 
