@@ -95,6 +95,7 @@ note: tuple 不能只有一个元素, e.g. (1) -> 1
 
 ### 指定数据类型
 2 :: float -> 2.0
+
 ### useful function
 1. show
 2. read
