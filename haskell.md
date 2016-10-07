@@ -31,23 +31,16 @@ list 嵌套 list 时, 内部 list 元素的数量可以不一样, 但是数据�
 ### !!
 获取 list 中的元素, e.g. "abcdefg" !! 1 -> b. Haskell 也是从 0 开始数数的. 访问大于 list 大小的元素会Exception `index too large`.
 
-### head
-第一个元素 head [1,2,3] -> 1, head [] 报错
+### useful function
+1. head 第一个元素 head [1,2,3] -> 1, head [] 报错
+2. tail 除掉一个元素的剩余元素 tail [1,2,3] -> [2,3], tail [] 报错
+3. init 除掉最后一个元素的剩余元素 init [1,2,3] -> [1,2], init [] 报错
+4. last 最后一个元素 last [1,2,3] -> 3, last [] 报错
+5. length list 长度, length [1,2,3] -> 3
+6. null 判断 list 是否为空  null [] -> true
+7. take 取前 n 个元素, take 4 [1,2,3] -> [1,2,3] 注意: 大于list 大小不会报错
+8. maximum, minimum, drop, sum, product, elem等等
 
-### tail
-除掉一个元素的剩余元素 tail [1,2,3] -> [2,3], tail [] 报错
-
-### init
-除掉最后一个元素的剩余元素 init [1,2,3] -> [1,2], init [] 报错
-
-### last
-最后一个元素 last [1,2,3] -> 3, last [] 报错
-
-### length
-list 长度, length [1,2,3] -> 3
-
-### null
-判断 list 是否为空  null [] -> true
 
 ### 比较
 一个一个元素进行比较, 不同类型元素不能比较
