@@ -70,3 +70,5 @@ e.g.
 1. 求 list 大小 length' li = sum( [1| _<-li] )
 
 ## tuple
+1. 固定大小
+2. 可存放不同类型元素
