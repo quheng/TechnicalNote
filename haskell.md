@@ -90,6 +90,10 @@ note: tuple 不能只有一个元素, e.g. (1) -> 1
 :t fst -> fst :: (a, b) -> a
 这里的a, b均是小写字母开头, 表面不是类型名. 这里更像是一种泛型, 省略类型名, 所有类型均可传入.
 
+### useful function
+1. show
+2. read
+
 
 
 
