@@ -100,14 +100,19 @@ note: tuple 不能只有一个元素, e.g. (1) -> 1
 1. show
 2. read
 
-## other
 
-1. as-pattern
+## switch-case like (guard)
+
+### as-pattern
 ```
 test all@(first:second) = all
 test "test string"
 ```
 输出为 "test string"
 
-
+### 样例
+test_guard a,b | c == 1 = "1"
+               | c == 2 = "2"
+               | otherwise = "1 nor 2"
+               | where c = a/b
 
