@@ -15,6 +15,10 @@ you can add `:set promot "ghci> "` to `~/.ghci`
 else part is mandatory, 因为 if 语句在 是一个表达式, 而表达式在Haskell 中一定有返回值
 
 ## list
+
+### note
+list 嵌套 list 时, 内部 list 元素的数量可以不一样, 但是数据类型必须一样.
+
 ### 字符串
 "abcd" 等价于 ['a', 'b', 'c', 'd']
 
