@@ -84,6 +84,9 @@ note: tuple 不能只有一个元素, e.g. (1) -> 1
 3. zip
 
 ## 类型
+
+`_` 占位符, match everything
+
 :t (==) -> (==) :: Eq a => a -> a -> bool
 两个类型为 Eq 的变量, 返回 bool 类型的变量
 
