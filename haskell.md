@@ -31,6 +31,9 @@ list 嵌套 list 时, 内部 list 元素的数量可以不一样, 但是数据�
 ### !!
 获取 list 中的元素, e.g. "abcdefg" !! 1 -> b. Haskell 也是从 0 开始数数的. 访问大于 list 大小的元素会Exception `index too large`.
 
+### 比较
+一个一个元素进行比较, 不同类型元素不能比较
+
 ### useful function
 1. head 第一个元素 head [1,2,3] -> 1, head [] 报错
 2. tail 除掉一个元素的剩余元素 tail [1,2,3] -> [2,3], tail [] 报错
@@ -50,8 +53,7 @@ list 嵌套 list 时, 内部 list 元素的数量可以不一样, 但是数据�
 6. take 10 repeat('1') > "1111111111" 元素为参数
 7. replicate 3, '1' ->  "111"
 
-### 比较
-一个一个元素进行比较, 不同类型元素不能比较
+
 
 ```
 [1, 2] < [2]
