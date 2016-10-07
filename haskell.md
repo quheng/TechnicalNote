@@ -9,3 +9,6 @@ you can add `:set promot "ghci> "` to `~/.ghci`
 
 ## load file
 :l filename
+
+## if-statement
+else part is mandatory, 因为 if 语句在 是一个表达式, 而表达式在Haskell 中一定有返回值
