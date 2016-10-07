@@ -1,5 +1,9 @@
 # Haskell
 
+## ghci command
+1. `:l` load module
+2. `:t` 查看数据类型
+
 ## setup
 you can add `:set promot "ghci> "` to `~/.ghci`
 
@@ -72,4 +76,10 @@ e.g.
 ## tuple
 1. 固定大小
 2. 可存放不同类型元素
+
+### useful function
+1. fst
+2. snd
+3. zip
+
 
