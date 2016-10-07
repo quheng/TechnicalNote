@@ -23,4 +23,7 @@ else part is mandatory, 因为 if 语句在 是一个表达式, 而表达式在H
 连接两个list, 需要注意的是 Haskell 会遍历左边的list, 尽可能的把短的 list 放在左边. e.g. "hello" + "world" 得到 "hello world"
 
 ### :
-将一个元素放在一个list的开头, e.g. 'a' + "bcd" 得到 "abcd" 
+将一个元素放在一个list的开头, e.g. 'a' + "bcd" 得到 "abcd"
+
+### !!
+获取 list 中的元素, e.g. "abcdefg" !! 1 得到b. Haskell 也是从 0 开始数数的. 
