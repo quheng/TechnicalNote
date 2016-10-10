@@ -9,9 +9,9 @@ Host github
  HostName github.com
  IdentityFile ~/.ssh/id_rsa
 
-Host github_quheng
+Host github_mada
  HostName github.com
- IdentityFile ~/.ssh/quheng_rsa
+ IdentityFile ~/.ssh/mada_rsa
 ```
 
-2.git clone git@github_quheng:quheng/repo.git
+2.git clone git@github_mada:quheng/repo.git
