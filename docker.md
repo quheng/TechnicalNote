@@ -32,4 +32,4 @@
 **note**
 
 1. `dokcer inspect -f {{json .Config.Volumes}}` container_name 查看 volume 信息
-2. `--volumes-from container_name` 共享某个 container 的 volumes
+2. `--volumes-from container_name` 共享某个 container 所有的 volumes, 冲突的话只会拷贝其中一个
