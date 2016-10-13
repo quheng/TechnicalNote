@@ -14,7 +14,11 @@
 
 直接和主机进行绑定
 
-**note**: host_address 下的内容会将原始 image 中mount_address下的内容覆盖
+**note**: 
+
+1. host_address 下的内容会将原始 image 中mount_address下的内容覆盖
+2. `:ro` 表示只读
+3. 若 host_address 或 mount_address 不存在, 均会自动创建
 
 ## managed volume
 
