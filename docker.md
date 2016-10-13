@@ -19,6 +19,7 @@
 1. host_address 下的内容会将原始 image 中mount_address下的内容覆盖
 2. `:ro` 表示只读
 3. 若 host_address 或 mount_address 不存在, 均会自动创建
+4. host_address 可以是一个单独的文件
 
 ## managed volume
 
