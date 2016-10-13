@@ -20,6 +20,7 @@
 2. `:ro` 表示只读
 3. 若 host_address 或 mount_address 不存在, 均会自动创建
 4. host_address 可以是一个单独的文件
+5. -v 参数可多次指定
 
 ## managed volume
 
