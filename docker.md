@@ -6,3 +6,11 @@
 3. load image from files `dokcer load -i myfile.tar`
 3. installing from a docker file `docker build - < docker file`
 
+
+## volume
+
+## bind mount
+直接和主机进行绑定
+
+## managed volume
+和 docker 管理的空间进行绑定
