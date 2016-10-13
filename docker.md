@@ -8,9 +8,10 @@
 
 
 ## volume
-1. volume 是属于 container 的, 没有办法单独管理某一个 volume 
+1. volume 是属于 container 的, 没有办法单独管理某一个 volume, 可以单独创建 container 来辅助管理 volume
+2. 
 
-## bind mount
+### bind mount
 `-v host_address:mount_address`
 
 直接和主机进行绑定
@@ -25,7 +26,7 @@
 6. 多个 container 指定同一个 host_address 即可文件共享
 
 
-## managed volume
+### managed volume
 `-v mount_address`
 
 与 docker 管理的空间进行绑定
