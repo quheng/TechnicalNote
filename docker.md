@@ -8,6 +8,7 @@
 
 
 ## volume
+1. volume 是属于 container 的, 没有办法单独管理某一个 volume 
 
 ## bind mount
 `-v host_address:mount_address`
