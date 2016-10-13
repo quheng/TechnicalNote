@@ -10,7 +10,9 @@
 ## volume
 
 ## bind mount
+`-v host_address:mount_address`
 直接和主机进行绑定
+
 
 ## managed volume
 和 docker 管理的空间进行绑定
