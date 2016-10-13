@@ -11,8 +11,11 @@
 
 ## bind mount
 `-v host_address:mount_address`
+
 直接和主机进行绑定
 
+**note**: host_address 下的内容会将原始 image 中mount_address下的内容覆盖
 
 ## managed volume
+
 和 docker 管理的空间进行绑定
