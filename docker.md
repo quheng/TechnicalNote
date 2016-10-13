@@ -22,6 +22,7 @@
 4. host_address 可以是一个单独的文件
 5. -v 参数可多次指定
 
-## managed volume
 
+## managed volume
+`-v mount_address`
 和 docker 管理的空间进行绑定
