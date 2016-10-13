@@ -25,4 +25,9 @@
 
 ## managed volume
 `-v mount_address`
-和 docker 管理的空间进行绑定
+
+与 docker 管理的空间进行绑定
+
+**note**
+
+1. `dokcer inspect -f {{json .Config.Volumes}}` container_name 查看 volume 信息
