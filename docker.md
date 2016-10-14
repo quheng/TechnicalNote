@@ -50,5 +50,10 @@
 
 所有的接口通过 docker0 连接在同一个虚拟子网之中.
 
+### joined container
+`--net container:name`
+
+### open container
+`--net host`
 
 
