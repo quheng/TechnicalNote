@@ -35,3 +35,10 @@
 
 1. `dokcer inspect -f {{json .Config.Volumes}}` container_name 查看 volume 信息
 2. `--volumes-from container_name` 共享某个 container 所有的 volumes, 冲突的话只会拷贝其中一个
+
+## network
+
+### closed container
+`--net none`
+
+只在 container 内部进行网络交互, 无法连接其他 container.
