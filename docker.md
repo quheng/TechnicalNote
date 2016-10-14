@@ -37,8 +37,18 @@
 2. `--volumes-from container_name` 共享某个 container 所有的 volumes, 冲突的话只会拷贝其中一个
 
 ## network
+![](/assets/QQ20161014-0@2x.png)
+**note**: 参数只在创建 container 的时候有用.
 
 ### closed container
 `--net none`
 
 只在 container 内部进行网络交互, 无法连接其他 container.
+
+### bridged container
+`--net bridge` 默认值
+
+所有的接口通过 docker0 连接在同一个虚拟子网之中.
+
+
+
