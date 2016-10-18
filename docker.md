@@ -62,4 +62,11 @@
 
 `docker commit container_name new_image_name`
 
+### from Dockerfile
+
+`docker build`
+
+
+
+
 
