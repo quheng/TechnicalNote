@@ -38,7 +38,9 @@
 
 ## network
 ![](/assets/QQ20161014-0@2x.png)
-**note**: 参数只在创建 container 的时候有用.
+**note**: 
+1. 参数只在创建 container 的时候有用.
+2. `--link` 将 container 名映射为对应的 ip 地址
 
 ### closed container
 `--net none`
