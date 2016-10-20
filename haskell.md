@@ -3,6 +3,7 @@
 ## ghci command
 1. `:l` load module
 2. `:t` 查看数据类型
+3. `:info function` 查看函数信息
 
 ## setup
 you can add `:set promot "ghci> "` to `~/.ghci`
