@@ -116,5 +116,3 @@ test_guard a b | c == 1 = "1"
                | otherwise = "1 nor 2"
                where c = a/b
 注意ghci里不支持换行
-
-## 
