@@ -8,7 +8,7 @@
 5. `:m +Data.Ratio` :m 等价于 :module 用于导入模块
 
 ## setup
-you can add `:set promot "ghci> "` to `~/.ghci`
+you can add `:set prompt "ghci> "` to `~/.ghci`
 
 ## function
 1. 两个参数的函数可以使用中缀(infix)的方式调用: e.g. 10 \`div\` 5 等价于 div 10 5, 即 10 除以 5
