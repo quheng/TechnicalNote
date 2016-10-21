@@ -4,6 +4,7 @@
 1. `:l` load module
 2. `:t` 查看数据类型
 3. `:info function` 查看函数信息
+4. `:set +t` 自动输出数据类型
 
 ## setup
 you can add `:set promot "ghci> "` to `~/.ghci`
