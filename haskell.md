@@ -1,7 +1,7 @@
 # Haskell
 
 ## ghci command
-1. `:l` load module
+1. `:l` load module 等价于 `:load`
 2. `:t` 查看数据类型
 3. `:info function` 查看函数信息
 4. `:set +t` 自动输出数据类型 `:unset +t` 取消
