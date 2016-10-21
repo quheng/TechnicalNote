@@ -4,7 +4,7 @@
 1. `:l` load module
 2. `:t` 查看数据类型
 3. `:info function` 查看函数信息
-4. `:set +t` 自动输出数据类型
+4. `:set +t` 自动输出数据类型 `:unset +t` 取消
 5. `:m +Data.Ratio` :m 等价于 :module 用于导入模块
 
 ## setup
