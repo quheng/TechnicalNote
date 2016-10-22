@@ -106,7 +106,6 @@ data BookInfo = Book Int String [String]
 2. Book: value constructor 或者叫做 data constructor 必须大小, 使用它来调用该类型.
 3. driving: 怎么打印该类型的数据
 
-
 ### 指定数据类型
 2 :: float -> 2.0
 
