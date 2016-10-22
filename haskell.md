@@ -115,12 +115,3 @@ data BookInfo = Book Int String [String]
 ### useful function
 1. show
 2. read
-
-## switch-case like (guard)
-
-### as-pattern
-```
-test all@(first:second) = all
-test "test string"
-```
-输出为 "test string"
