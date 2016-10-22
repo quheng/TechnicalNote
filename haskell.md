@@ -100,7 +100,7 @@ note: tuple 不能只有一个元素, e.g. (1) -> 1
 ### 自定义数据类型
 ```
 data BookInfo = Book Int String [String]
-                deriving (show)
+                deriving (Show)
 ```
 1. BookInfo: 类型名, 必须要大写
 2. Book: value constructor 或者叫做 data constructor 必须大小, 使用它来调用该类型.
