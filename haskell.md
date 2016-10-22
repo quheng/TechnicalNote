@@ -104,7 +104,6 @@ note: tuple 不能只有一个元素, e.g. (1) -> 1
 1. show
 2. read
 
-
 ## switch-case like (guard)
 
 ### as-pattern
