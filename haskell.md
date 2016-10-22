@@ -121,10 +121,3 @@ test all@(first:second) = all
 test "test string"
 ```
 输出为 "test string"
-
-### 样例
-test_guard a b | c == 1 = "1"
-               | c == 2 = "2"
-               | otherwise = "1 nor 2"
-               where c = a/b
-注意ghci里不支持换行
