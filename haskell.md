@@ -18,6 +18,8 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 5. 只对合法输入的子集有合法输出的函数叫 partial function, 函数名应该以 unsafe 开头. 反之叫做 total function.
 6. `->` 代表一个函数有一个参数并且返回一个值. 所以, 可以说 Haskell 所有的函数**只能有一个参数**. 多参数的函数实际上是生成了多个取其中参数的函数, 取了前面参数的函数作为返回值取了下一个参数.
 
+
+
 ### where
 将 let 块放在最后, 提高阅读性
 
