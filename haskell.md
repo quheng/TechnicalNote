@@ -21,6 +21,10 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 将 let 块放在最后, 提高阅读性
 
 ### fold
+**note**
+1. 原始递归函数
+2. 类似于 mapreduce 中的 reduce
+
 1. foldl
 
 ```
