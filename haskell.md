@@ -25,9 +25,8 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 
 ```
 foldl :: (a -> b -> a) a [b] a
-foldl step zero (x:xs) = foldl 
-step (step zero x) xs foldl _ zero [] = zero
-
+foldl step zero (x:xs) = foldl step (step zero x) xs 
+foldl _ zero [] = zero
 ```
 
 (a -> b -> a): step 函数, (初始值, 读取到的 b , 输出新的累计值)
