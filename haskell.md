@@ -20,11 +20,55 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 ### where
 将 let 块放在最后, 提高阅读性
 
-## load file
-:l filename
+## 类型
 
-## if-statement
-else part is mandatory, 因为 if 语句在 是一个表达式, 而表达式在Haskell 中一定有返回值
+
+
+`_` wild card 占位符, match everything
+
+
+
+:t (==) -> (==) :: Eq a => a -> a -> bool
+
+两个类型为 Eq 的变量, 返回 bool 类型的变量
+
+
+
+:t fst -> fst :: (a, b) -> a
+
+这里的a, b均是小写字母开头, 表面不是类型名. 这里更像是一种泛型, 省略类型名, 所有类型均可传入.
+
+
+
+### 自定义数据类型
+
+```
+
+data BookInfo (可选参数的数据类型)= Book Int String [String]
+
+ deriving (Show)
+
+```
+
+1. BookInfo: 类型名, 必须要大写
+
+2. Book: value constructor 或者叫做 data constructor 必须大小, 使用它来调用该类型.
+
+3. deriving: 怎么打印该类型的数据
+
+
+
+### 指定数据类型
+
+2 :: float -> 2.0
+
+
+
+### useful function
+
+1. show
+
+2. read
 
 ## list
 
@@ -90,29 +134,3 @@ note: tuple 不能只有一个元素, e.g. (1) -> 1
 1. fst
 2. snd
 3. zip
-
-## 类型
-
-`_` wild card 占位符, match everything
-
-:t (==) -> (==) :: Eq a => a -> a -> bool
-两个类型为 Eq 的变量, 返回 bool 类型的变量
-
-:t fst -> fst :: (a, b) -> a
-这里的a, b均是小写字母开头, 表面不是类型名. 这里更像是一种泛型, 省略类型名, 所有类型均可传入.
-
-### 自定义数据类型
-```
-data BookInfo (可选参数的数据类型)= Book Int String [String]
-                deriving (Show)
-```
-1. BookInfo: 类型名, 必须要大写
-2. Book: value constructor 或者叫做 data constructor 必须大小, 使用它来调用该类型.
-3. deriving: 怎么打印该类型的数据
-
-### 指定数据类型
-2 :: float -> 2.0
-
-### useful function
-1. show
-2. read
