@@ -51,7 +51,8 @@ foldr _ zero [] = zero
 3. 转换
 
 ```
-myFoldl f z xs = foldr step id xs z where step x g a = g (f a x)
+myFoldl f z xs = foldr step id xs z 
+                 where step x g a = g (f a x)
 ```
 
 
