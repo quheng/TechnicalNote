@@ -21,6 +21,11 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 将 let 块放在最后, 提高阅读性
 
 ### fold
+`foldl :: (a -> b -> a) a [b] a`
+(a -> b -> a): step 函数, (初始值, 读取到的 b , 输出新的累计值)
+a: step 函数最初的初始值
+[b]: 作用的 list
+a: 最后的累计值
 
 
 ## 类型
