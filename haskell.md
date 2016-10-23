@@ -21,6 +21,7 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 将 let 块放在最后, 提高阅读性
 
 ### fold
+[reading](http://www.cs.nott.ac.uk/~pszgmh/fold.pdf)
 
 **note**
 
