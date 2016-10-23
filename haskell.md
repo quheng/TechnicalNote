@@ -26,6 +26,7 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 
 1. 原始递归函数
 2. 类似于 mapreduce 中的 reduce
+3. 尽可能使用 Data.List 中的 foldl'
 
 1. foldl
 
