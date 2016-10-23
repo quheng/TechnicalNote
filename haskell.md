@@ -26,6 +26,11 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 a: step 函数最初的初始值
 [b]: 作用的 list
 a: 最后的累计值
+用 fold 写 sum 可以表示成
+```
+foldlSum xs = foldl step 0 xs
+    where step acc x = acc + x
+```
 
 
 ## 类型
