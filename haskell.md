@@ -48,6 +48,8 @@ foldr step zero (x:xs) = step x (foldr step zero xs)
 foldr _ zero [] = zero
 ```
 
+3. 转换
+
 ## 类型
 
 
