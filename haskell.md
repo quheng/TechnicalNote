@@ -63,6 +63,9 @@ myFoldl f z xs = foldr step id xs z
      where step x g a = g (f a x)
 ```
 
+### lambda
+`\` 代表匿名函数
+
 ## 类型
 
 
