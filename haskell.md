@@ -23,6 +23,7 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 ### fold
 
 **note**
+
 1. 原始递归函数
 2. 类似于 mapreduce 中的 reduce
 
