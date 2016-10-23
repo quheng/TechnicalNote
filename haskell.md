@@ -21,7 +21,15 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 将 let 块放在最后, 提高阅读性
 
 ### fold
-`foldl :: (a -> b -> a) a [b] a`
+1. foldl
+
+```
+foldl :: (a -> b -> a) a [b] a
+foldl step zero (x:xs) = foldl 
+step (step zero x) xs foldl _ zero [] = zero
+
+```
+
 (a -> b -> a): step 函数, (初始值, 读取到的 b , 输出新的累计值)
 a: step 函数最初的初始值
 [b]: 作用的 list
@@ -32,6 +40,15 @@ foldlSum xs = foldl step 0 xs
     where step acc x = acc + x
 ```
 
+2. foldr
+
+```
+
+foldr :: (a -> b -> b) -> b -> [a] -> b
+
+foldr step zero (x:xs) = step x (foldr step zero xs) 
+foldr _ zero [] = zero
+```
 
 ## 类型
 
