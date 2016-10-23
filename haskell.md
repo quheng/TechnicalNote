@@ -22,6 +22,7 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 
 ### fold
 
+
 ## 类型
 
 
