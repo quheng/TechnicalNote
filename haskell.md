@@ -52,7 +52,7 @@ foldr _ zero [] = zero
 
 ```
 myFoldl f z xs = foldr step id xs z 
-                 where step x g a = g (f a x)
+     where step x g a = g (f a x)
 ```
 
 ## 类型
