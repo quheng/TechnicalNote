@@ -79,8 +79,6 @@ myFoldl f z xs = foldr step id xs z
 
 将有一部分参数的函数设计成新函数
 
-
-
 ```
 niceSum :: [Integer] -> Integer
 niceSum xs = foldl (+) 0 xs    -- 之前的写法
