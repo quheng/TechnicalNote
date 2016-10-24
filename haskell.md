@@ -22,7 +22,7 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 ```
 niceSum :: [Integer] -> Integer 
 niceSum xs = foldl (+) 0 xs
-nicerSum = foldl (+) 0
+nicerSum = foldl (+) 0  -- currying
 ```
 
 
