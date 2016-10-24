@@ -82,21 +82,9 @@ myFoldl f z xs = foldr step id xs z
 
 
 ```
-
-
-
 niceSum :: [Integer] -> Integer
-
-
-
-niceSum xs = foldl (+) 0 xs
-
-
-
-nicerSum = foldl (+) 0 -- currying
-
-
-
+niceSum xs = foldl (+) 0 xs    -- 之前的写法
+nicerSum = foldl (+) 0         -- currying
 ```
 
 ### sections
