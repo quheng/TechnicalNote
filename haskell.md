@@ -92,7 +92,6 @@ nicerSum = foldl (+) 0         -- currying
 用()生成第二个参数作为已知的, 只保留第一个参数新函数
 
 ```
-
 foo = (`elem` ['a'..'z'])
 foo 'a' -- True
 foo '1' -- False
