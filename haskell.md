@@ -90,7 +90,8 @@ foo '1' -- False
 
 ### as-pattern
 ```
-suffixes :: [a] -> [[a]] suffixes xs@(_:xs') = xs : suffixes xs' 
+suffixes :: [a] -> [[a]] 
+ suffixes xs@(_:xs') = xs : suffixes xs' 
  suffixes _ = []
 ```
 
