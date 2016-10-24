@@ -75,6 +75,48 @@ myFoldl f z xs = foldr step id xs z
 ### lambda
 `\` 代表匿名函数
 
+### currying
+
+将有一部分参数的函数设计成新函数
+
+
+
+```
+
+
+
+niceSum :: [Integer] -> Integer
+
+
+
+niceSum xs = foldl (+) 0 xs
+
+
+
+nicerSum = foldl (+) 0 -- currying
+
+
+
+```
+
+
+
+### sections
+
+用()生成第二个参数作为已知的, 只保留第一个参数新函数
+
+
+
+```
+
+foo = (`elem` ['a'..'z'])
+
+foo 'a' -- True
+
+foo '1' -- False
+
+```
+
 ## 类型
 
 
