@@ -97,9 +97,9 @@ suffixes :: [a] -> [[a]]
 ```
 xs 代表了 (_:xs')
 
+
+
 ## 类型
-
-
 
 `_` wild card 占位符, match everything
 
