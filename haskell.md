@@ -19,6 +19,11 @@ you can add `:set prompt "ghci> "` to `~/.ghci`
 6. `->` 代表一个函数有一个参数并且返回一个值. 所以, 可以说 Haskell 所有的函数**只能有一个参数**. 多参数的函数实际上是生成了多个取其中参数的函数, 取了前面参数的函数作为返回值取了下一个参数.
 7. currying, 将有一部分参数的函数设计成新函数
 
+```
+niceSum :: [Integer] -> Integer 
+niceSum xs = foldl (+) 0 xs
+nicerSum = foldl (+) 0
+```
 
 
 ### where
