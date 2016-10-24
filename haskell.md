@@ -89,6 +89,7 @@ foo '1' -- False
 ```
 
 ### as-pattern
+举例说明
 ```
 suffixes :: [a] -> [[a]] 
  suffixes xs@(_:xs') = xs : suffixes xs' 
