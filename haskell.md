@@ -88,6 +88,12 @@ foo 'a' -- True
 foo '1' -- False
 ```
 
+### as-pattern
+```
+suffixes :: [a] -> [[a]] suffixes xs@(_:xs') = xs : suffixes xs' 
+ suffixes _ = []
+```
+
 ## 类型
 
 
