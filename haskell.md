@@ -94,6 +94,7 @@ suffixes :: [a] -> [[a]]
  suffixes xs@(_:xs') = xs : suffixes xs' 
  suffixes _ = []
 ```
+xs 代表了 (_:xs')
 
 ## 类型
 
