@@ -95,8 +95,7 @@ suffixes :: [a] -> [[a]]
  suffixes xs@(_:xs') = xs : suffixes xs' 
  suffixes _ = []
 ```
-xs 代表了 (_:xs')
-
+xs 代表了 (_:xs'), 提高了代码的可阅读性, 更重要的是, 我们不需要在生成一个新的 newXs = (_:xs') 提高了性能
 
 
 ## 类型
