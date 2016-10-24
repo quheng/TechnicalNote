@@ -104,18 +104,13 @@ xs 代表了 (_:xs')
 `_` wild card 占位符, match everything
 
 
-
 :t (==) -> (==) :: Eq a => a -> a -> bool
 
 两个类型为 Eq 的变量, 返回 bool 类型的变量
 
-
-
 :t fst -> fst :: (a, b) -> a
 
 这里的a, b均是小写字母开头, 表面不是类型名. 这里更像是一种泛型, 省略类型名, 所有类型均可传入.
-
-
 
 ### 自定义数据类型
 
@@ -133,13 +128,9 @@ data BookInfo (可选参数的数据类型)= Book Int String [String]
 
 3. deriving: 怎么打印该类型的数据
 
-
-
 ### 指定数据类型
 
 2 :: float -> 2.0
-
-
 
 ### useful function
 
