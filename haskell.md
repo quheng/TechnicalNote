@@ -99,8 +99,6 @@ nicerSum = foldl (+) 0 -- currying
 
 ```
 
-
-
 ### sections
 
 用()生成第二个参数作为已知的, 只保留第一个参数新函数
