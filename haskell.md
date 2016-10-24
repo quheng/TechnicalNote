@@ -94,9 +94,7 @@ nicerSum = foldl (+) 0         -- currying
 ```
 
 foo = (`elem` ['a'..'z'])
-
 foo 'a' -- True
-
 foo '1' -- False
 
 ```
