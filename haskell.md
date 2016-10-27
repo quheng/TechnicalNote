@@ -145,6 +145,21 @@ data BookInfo (可选参数的数据类型)= Book Int String [String]
 
 ## module
 Haskell 对应一个单一的 module, module 中表明了给外界提供了什么样的功能. module name 和数据类型一样必须以大写字母开头.
+e.g.
+
+```
+module SimpleJSON
+    ( 
+      JValue(..)
+    , getString
+    , getInt
+    , getDouble
+    , getBool
+    , getObject
+    , getArray
+    , isNull
+    ) where
+```
 
 ## list
 
