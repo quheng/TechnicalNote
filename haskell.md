@@ -144,7 +144,7 @@ data BookInfo (可选参数的数据类型)= Book Int String [String]
 2. read
 
 ## module
-
+Haskell 对应一个单一的 module, module 中表明了 module 内部可以接触到哪些其他的 module.
 
 ## list
 
