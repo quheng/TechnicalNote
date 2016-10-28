@@ -8,4 +8,5 @@
 * [Vim](vim.md)
 * [presto](presti.md)
 * [Haskell](haskell.md)
+* [Shell](shell.md)
 
