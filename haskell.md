@@ -138,6 +138,7 @@ data BookInfo (可选参数的数据类型)= Book Int String [String]
 class BasicEq a where
     isEqual :: a -> a -> Bool
 ```
+定义名叫(必须以大写字母开头)的 typeclasses. 这种类型的实例必须实现定义好的函数.
 
 ### 指定数据类型
 
