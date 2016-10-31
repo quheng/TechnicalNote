@@ -133,6 +133,12 @@ data BookInfo (可选参数的数据类型)= Book Int String [String]
 
 3. deriving: 怎么打印该类型的数据
 
+### typeclasses
+```
+class BasicEq a where
+    isEqual :: a -> a -> Bool
+```
+
 ### 指定数据类型
 
 2 :: float -> 2.0
