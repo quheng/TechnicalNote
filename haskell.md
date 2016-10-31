@@ -143,7 +143,7 @@ instance BasicEq Bool where
     isEqual False False = True           
     isEqual _ _ = False
 ```
-定义名叫(必须以大写字母开头)的 typeclasses. 这种类型的实例必须实现定义好的函数.
+定义名叫(必须以大写字母开头)的 typeclasses. 这种类型的实例必须实现定义好的函数. 类似注册的概念, 表面 Bool 也是一种 BasicEq, 有 isEqual 函数. Bool 类型必须事先写好.
 
 ### 指定数据类型
 
