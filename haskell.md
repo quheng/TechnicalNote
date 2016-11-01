@@ -158,7 +158,13 @@ instance BasicEq Bool where
 type NewInt = Int
 (1 :: NewInt) + (1 :: NewInt)   -- 所有可以使用 NewInt 的都可以使用 Int
 ```
-2. newType 只能定义一个构造函数
+2. newType 只能定义一个构造函数且只能有一个 Field
+```
+newtype TooFew = TooFew -- error 没有 Field
+newtype TooManyFields = Fields Int Int -- error 两个 Field
+newtype TooManyCtors = Bad Int   -- error 两个构造函数
+                      | Worse Int
+```
 
 ### 指定数据类型
 
