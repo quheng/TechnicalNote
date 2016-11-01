@@ -165,7 +165,7 @@ newtype TooManyFields = Fields Int Int -- error 两个 Field
 newtype TooManyCtors = Bad Int   -- error 两个构造函数
                       | Worse Int
 ```
-这样 newType 在空间和时间上都更加节省
+这样 newType 在空间和时间上都更加节省.
 
 ### 指定数据类型
 
