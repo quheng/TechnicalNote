@@ -152,11 +152,7 @@ instance BasicEq Bool where
 
 2 :: float -> 2.0
 
-### useful function
-
-1. show
-
-2. read
+### 常用数字类型
 
 ## module
 Haskell 对应一个单一的 module, module 中表明了给外界提供了什么样的功能. module name 和数据类型一样必须以大写字母开头.
