@@ -155,8 +155,10 @@ instance BasicEq Bool where
 ### type data newType
 1. type 只是取一个别名
 ```
-
+type NewInt = Int
+(1 :: NewInt) + (1 :: NewInt)   -- 所有可以使用 NewInt 的都可以使用 Int
 ```
+2. newType 只能定义一个构造函数
 
 ### 指定数据类型
 
