@@ -202,7 +202,7 @@ module ExportNothing () where
 ### "<-"
 绑定一个 I/O 的结果到一个名字上.
 ```
-inpStr <- getLine
+inpStr <- getLine   --getLine :: IO String
 ```
 
 ## list
