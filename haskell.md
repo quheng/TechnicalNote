@@ -200,7 +200,10 @@ module ExportNothing () where
 ## IO
 
 ### "<-"
-
+绑定一个 I/O 的结果到一个名字上.
+```
+inpStr <- getLine
+```
 
 ## list
 
