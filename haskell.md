@@ -205,6 +205,9 @@ module ExportNothing () where
 inpStr <- getLine   --getLine :: IO String
 ```
 
+### "<<="
+
+
 ## list
 
 ### note
