@@ -208,7 +208,7 @@ inpStr <- getLine   --getLine :: IO String
 ### "<<="
 
 
-## monad
+## m
 
 ## list
 
