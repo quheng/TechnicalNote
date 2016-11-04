@@ -151,6 +151,7 @@ instance BasicEq Bool where
 ### useful type class
 1. Show 转成 String, 可以用 show 函数将 Show 转成 String
 2. Read 读取 String, 可以用 read 函数将 String 转成一个 data
+3. Functor 提供遍历数据结构的方法, 可以用 fmap 来遍历整个数据结构, list([]) 的 fmap 就是 map.
 
 ### type data newType
 1. type 只是取一个别名
