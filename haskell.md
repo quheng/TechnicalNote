@@ -148,7 +148,7 @@ instance BasicEq Bool where
 
 在 Haskell 98 中, 待注册的数据类型(例子中的 Bool)不能是类型参数如 String([Char]). 若要使用的话在文件的开头加上`{-# LANGUAGE TypeSynonymInstances #-}`. 若同时注册多个相同的函数, 会发生 overlapping, 可以使用OverLappingInstances 解决, 这时会自动使用最接近的函数.
 
-### useful function
+### useful type class
 1. Show 转成 String, 可以用 show 函数将 Show 转成 String
 2. Read 读取 String, 可以用 read 函数将 String 转成一个 data
 
