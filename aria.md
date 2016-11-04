@@ -2,4 +2,4 @@
 
 2. 安装 aria2 `brew install aria2`
 
-3. 编写配置文件
+3. 编写 aria2 配置文件
