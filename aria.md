@@ -2,7 +2,11 @@
 
 2. 安装 aria2 `brew install aria2`
 
-3. 编写 aria2 配置文件
+3. 编写 aria2 配置文件(末尾)
+
+4. 运行 ariac2 --conf-path==PATH-TO-CONFIG
+
+5. 在 web 中点击导出到 aria2
 
 ```
 #用户名 
@@ -47,10 +51,9 @@ dir=/User/xxx/Downloads
 #文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本 
 #disk-cache=0 #另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?) 
 #enable-mmap=true 
-#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长 #所需时间 none < falloc ? trunc << prealloc, falloc和trunc需要文件系统和内核支持 file-allocation=prealloc
-
-
-
-文／Vaayne（简书作者）原文链接：http://www.jianshu.com/p/1290f8e7b326著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。
-
+#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长 
+#所需时间 none < falloc ? trunc << prealloc, falloc和trunc需要文件系统和内核支持 
+file-allocation=prealloc
 ```
+
+参考: http://www.jianshu.com/p/1290f8e7b326
