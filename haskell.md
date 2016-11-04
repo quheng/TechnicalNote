@@ -120,11 +120,8 @@ f . g  代表了 f (g x)
 ### 自定义数据类型
 
 ```
-
 data BookInfo (可选参数的数据类型)= Book Int String [String]
-
- deriving (Show)
-
+   deriving (Show)
 ```
 
 1. BookInfo: 类型名, 必须要大写
