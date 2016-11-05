@@ -29,3 +29,5 @@ public boolean isPresent() {
     return value != null;
 }
 ```
+
+和之前用 if 的处理一模一样, 尽量使用其他 api 的简便形式.
