@@ -30,8 +30,17 @@ public boolean isPresent() {
 }
 ```
 
-和之前用 if 的处理一模一样, 尽量使用其他 api 的简便形式, 如 orElse, ifPresent, orElseGet等.
+和之前用 if 的处理一模一样, 尽量使用其他 api 的简便形式, 如 orElse, ifPresent等.
 
-## orElse
+## orElseGet 和 map
+
+```
 有值则返回, 否则返回默认值
+```
+
+```
+如果有值，则对其执行调用mapping函数得到返回值。如果返回值不为null，则创建包含mapping返回值的Optional作为map方法返回值，否则返回空Optional。
+```
+
+which one is better?
 
