@@ -43,9 +43,7 @@ public boolean isPresent() {
 ```
 
 ```
-upperName = name.flatMap((value) -> Optional.of(value.toUpperCase()));
-
-System.out.println(upperName.orElse("No value found"));//输出SANAULLA
+flatMap方法与map方法类似，区别在于mapping函数的返回值不同。map方法的mapping函数返回值可以是任何类型T，而flatMap方法的mapping函数必须是Optional。
 ```
 
 which one is better?
