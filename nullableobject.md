@@ -7,6 +7,8 @@ if (obj == null)
 else 
  do the other things
 ```
+在实际的变成中很可能去忘记考虑 null 的情况. 使用 Optional 迫使我们去主动的思考这里是空的情况应该怎么处理, 避免了一些潜在可能的 Bug.
+
 JAVA 8 和 Guava 都提供了 Optional 来更好的解决这一问题.
 
 ## 参数检查
