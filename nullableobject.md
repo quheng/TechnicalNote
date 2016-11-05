@@ -16,5 +16,5 @@ JAVA 8 和 Guava 都提供了 Optional 来更好的解决这一问题. 下面的
 避免在参数中使用 Optional<T>.
 
 ## isPresent
-尽量避免使用
+尽量**避免**使用isPresent().
 
