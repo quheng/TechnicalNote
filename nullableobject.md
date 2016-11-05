@@ -9,3 +9,8 @@ else
 ```
 JAVA 8 和 Guava 都提供了 Optional 来更好的解决这一问题.
 
+## 参数检查
+当需要保证参数不可能是 null 的时候应该立即用 Optional.of(obj)
+
+
+
