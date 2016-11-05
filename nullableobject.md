@@ -31,3 +31,6 @@ public boolean isPresent() {
 ```
 
 和之前用 if 的处理一模一样, 尽量使用其他 api 的简便形式.
+
+## orElse
+有值则返回, 否则返回默认值
