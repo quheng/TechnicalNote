@@ -42,5 +42,11 @@ public boolean isPresent() {
 如果有值，则对其执行调用mapping函数得到返回值。如果返回值不为null，则创建包含mapping返回值的Optional作为map方法返回值，否则返回空Optional。
 ```
 
+```
+upperName = name.flatMap((value) -> Optional.of(value.toUpperCase()));
+
+System.out.println(upperName.orElse("No value found"));//输出SANAULLA
+```
+
 which one is better?
 
