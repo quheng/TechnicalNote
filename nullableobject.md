@@ -7,3 +7,4 @@ if (obj == null)
 else 
  do the other things
 ```
+JAVA 8 和 Guava 都提供了 Optional 来更好的解决这一问题.
