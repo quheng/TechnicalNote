@@ -25,5 +25,7 @@ JAVA 8 和 Guava 都提供了 Optional 来更好的解决这一问题. 下面的
  * 
  * @return {@code true} if there is a value present, otherwise {@code false} 
  */
-public boolean isPresent() { return value != null;}
+public boolean isPresent() { 
+    return value != null;
+}
 ```
