@@ -15,7 +15,7 @@ JAVA 8 和 Guava 都提供了 Optional 来更好的解决这一问题. 下面的
 当需要保证参数不可能是 null 的时候应该立即用 Optional.of(obj); 若某个参数的值为空时需要特殊处理, 则应该使用 Optional.ofNullable() 来提醒自己要处理 null 的情况.
 避免在参数中使用 Optional<T>.
 
-## isPresent
+## isPresent, get
 尽量**避免**使用isPresent().
 可以看到 isPresent() 的实现是:
 
