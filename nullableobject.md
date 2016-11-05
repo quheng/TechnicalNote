@@ -48,3 +48,7 @@ flatMap方法与map方法类似，区别在于mapping函数的返回值不同。
 
 which one is better?
 
+## filter
+```
+如果有值并且满足断言条件返回包含该值的Optional，否则返回空Optional。
+```
