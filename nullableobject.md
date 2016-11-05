@@ -18,6 +18,12 @@ JAVA 8 和 Guava 都提供了 Optional 来更好的解决这一问题. 下面的
 ## isPresent
 尽量**避免**使用isPresent().
 可以看到 isPresent() 的实现是:
-```
 
+```
+/**
+ * Return {@code true} if there is a value present, otherwise {@code false}. 
+ * 
+ * @return {@code true} if there is a value present, otherwise {@code false} 
+ */
+public boolean isPresent() { return value != null;}
 ```
