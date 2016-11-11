@@ -19,7 +19,10 @@ Ordering<String> byLengthOrdering = new Ordering<String>(){
 ```
 
 ### chaining 链式调用
+1. reverse() 取反
+2. nullsFirst() or nullsLast() null 在前或在后
 
+链式调用应从后往前读
 
 
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
