@@ -22,7 +22,7 @@ Ordering<String> byLengthOrdering = new Ordering<String>(){
 1. reverse() 取反
 2. nullsFirst() or nullsLast() null 在前或在后
 
-链式调用应从后往前读
+链式调用应从后往前读, 用后面的方法从后往前读.
 
 
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
