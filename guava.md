@@ -10,5 +10,13 @@
 7. usingToString() 转成 String 之后按字典序
 8. 新建
 
+```
+Ordering<String> byLengthOrdering = new Ordering<String>(){
+ public int compare(String left, String right) {
+     return Ints.compare(left.length(), right.length());
+ }
+};
+```
+
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
 
