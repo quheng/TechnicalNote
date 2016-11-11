@@ -21,5 +21,12 @@ e.g.
 
 ## sort
 
+## jq 
+sample
+
+```
+cat s6.txt | cut -f 2 -d '|' | jq '.logistics_address_search_response.addresses.address_result[0] | .province + "," + .city + "," + .country'
+```
+
 
 
