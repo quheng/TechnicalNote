@@ -7,7 +7,7 @@
 4. explicit()  给定顺序排序, 若出现了为给定顺序的元素, 会抛出 IncomparableValueException
 5. from() 从一个comparator 生成 Ordering
 6. natural() 自然序
-
+7. usingToString() 转成 String 之后按字典序
 
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
 
