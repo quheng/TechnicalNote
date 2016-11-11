@@ -27,5 +27,9 @@ Ordering<String> byLengthOrdering = new Ordering<String>(){
 ### 方法
 取最大, 最小, 排序, 二分查找等
 
+## Objects
+1. Objects.equal(a, b). 避免判断 a 是否是 null.
+2. ModeObjects.toStringHelper(this)
+
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
 
