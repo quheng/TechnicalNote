@@ -6,7 +6,8 @@
 3. compound()  可以是一个 Comparator List, 用来处理相等的情况(即 ordering 返回 0), 直到其中一个 Comparator 返回值不是零.
 4. explicit()  给定顺序排序, 若出现了为给定顺序的元素, 会抛出 IncomparableValueException
 5. from() 从一个comparator 生成 Ordering
-6. 
+6. natural() 自然序
+
 
 
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
