@@ -30,6 +30,7 @@ Ordering<String> byLengthOrdering = new Ordering<String>(){
 ## Objects
 1. Objects.equal(a, b). 避免判断 a 是否是 null.
 2. ModeObjects.toStringHelper(this), 帮助实现 toString() 方法
+3. 
 
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
 
