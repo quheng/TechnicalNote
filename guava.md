@@ -20,5 +20,7 @@ Ordering<String> byLengthOrdering = new Ordering<String>(){
 
 ### chaining 链式调用
 
+
+
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
 
