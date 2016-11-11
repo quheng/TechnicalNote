@@ -24,6 +24,8 @@ Ordering<String> byLengthOrdering = new Ordering<String>(){
 
 链式调用应从后往前读, 用后面的方法从后往前读.
 
+### 方法
+取最大, 最小, 排序, 二分查找等
 
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
 
