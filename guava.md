@@ -42,5 +42,7 @@ Ordering<String> byLengthOrdering = new Ordering<String>(){
 ### bimap
 从 key-value 和 从 value-kay 的双向查找
 
+
+
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
 
