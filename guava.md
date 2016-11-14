@@ -45,7 +45,8 @@ Ordering<String> byLengthOrdering = new Ordering<String>(){
 ### table
 双 key 的 map, 类似 Map<firstName, Map<LastName, Person>>, 形状类似一个表, 可以从行查或从列查.
 
-
+### ClassToInstanceMap
+Map<Class,Object>, 避免了使用 get() 之后还需要 cast 的问题.
 
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
 
