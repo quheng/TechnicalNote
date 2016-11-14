@@ -48,7 +48,8 @@ Ordering<String> byLengthOrdering = new Ordering<String>(){
 ### ClassToInstanceMap
 Map<Class,Object>, 避免了使用 get() 之后还需要 cast 的问题.
 
-###
+### RangeSet
+value 是一个范围, 可以将重叠的范围合并起来.
 
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
 
