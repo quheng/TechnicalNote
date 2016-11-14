@@ -49,7 +49,7 @@ Ordering<String> byLengthOrdering = new Ordering<String>(){
 Map<Class,Object>, 避免了使用 get() 之后还需要 cast 的问题.
 
 ### RangeSet
-维护一个区间, 可以将重叠的范围合并起来.
+维护一个区间, 可以将重叠的范围合并起来. 可以对区间求补, 查询是否包含, 查询包含某个值的范围
 
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
 
