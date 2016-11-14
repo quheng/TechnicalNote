@@ -54,5 +54,9 @@ Map<Class,Object>, 避免了使用 get() 之后还需要 cast 的问题.
 ### RangeMap
 将区间上的点进行标记, 后标记的点覆盖前面的.
 
+
+## collection helper
+### peekingIterator
+读取下一个元素, 但不跳到下一个元素
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
 
