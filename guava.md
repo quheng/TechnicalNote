@@ -32,5 +32,15 @@ Ordering<String> byLengthOrdering = new Ordering<String>(){
 2. ModeObjects.toStringHelper(this), 帮助实现 toString() 方法
 3. Comparision.start() 帮助实现 compareTo(Object that) 方法
 
+## data structure
+### multiSet
+统计元素个数
+
+### multiMap
+管理 value 的 collection 的 map
+
+### bimap
+从 key-value 和 从 value-kay 的双向查找
+
 reference: [Guava github wiki](https://github.com/google/guava/wiki)
 
