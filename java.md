@@ -29,7 +29,6 @@ if (obj == null)
  do something
 else
  do the other things
-
 ```
 
 在实际的变成中很可能去忘记考虑 null 的情况. 使用 Optional 迫使我们去主动的思考这里是空的情况应该怎么处理, 避免了一些潜在可能的 Bug.
