@@ -4,9 +4,12 @@
 
 3. 编写 aria2 配置文件(末尾)
 
-4. 运行 ariac2 --conf-path==PATH-TO-CONFIG
+4. 运行 aria2 --conf-path==PATH-TO-CONFIG
 
 5. 在 web 中点击导出到 aria2
+
+6. 直接下载某软件 aria2 -c url
+
 
 ```
 #用户名 
