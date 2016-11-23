@@ -47,32 +47,19 @@ JAVA 8 和 Guava 都提供了 Optional 来更好的解决这一问题. 下面的
 可以看到 isPresent() 的实现是:
 
 ```
-
 /**
-
  * Return {@code true} if there is a value present, otherwise {@code false}.
-
  *
-
  * @return {@code true} if there is a value present, otherwise {@code false}
-
  */
-
 public boolean isPresent() {
-
  return value != null;
-
 }
 
 ```
-
-
-
 和之前用 if 的处理一模一样, 尽量使用其他 api 的简便形式, 如 orElse, ifPresent等.
 
-
-
-## orElseGet, map, flatMap
+### orElseGet, map, flatMap
 
 
 
