@@ -8,7 +8,7 @@
 
 5. 在 web 中点击导出到 aria2
 
-6. 直接下载某软件 aria2 -c url
+6. 开启服务 aria2, 直接下载某软件 aria2 -c url
 
 
 ```
