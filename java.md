@@ -61,40 +61,14 @@ public boolean isPresent() {
 
 ### orElseGet, map, flatMap
 
-
-
-```
-
 有值则返回, 否则返回默认值
-
-```
-
-
-
-```
-
 如果有值，则对其执行调用mapping函数得到返回值。如果返回值不为null，则创建包含mapping返回值的Optional作为map方法返回值，否则返回空Optional。
-
-```
-
-
-
-```
 
 flatMap方法与map方法类似，区别在于mapping函数的返回值不同。map方法的mapping函数返回值可以是任何类型T，而flatMap方法的mapping函数必须是Optional。
 
-```
-
-
-
 which one is better?
-
-
 
 ## filter
 
-```
-
 如果有值并且满足断言条件返回包含该值的Optional，否则返回空Optional。
 
-```
