@@ -6,6 +6,7 @@
 4. Supplier<T> 参数: None, 返回值: T
 5. UnaryOperator<T> 参数: T, 返回值: T  单元操作符
 6. BinaryOperator<T, R> 参数: (T, T), 返回值: R
+讲的挺好的[阅读材料](http://zh.lucida.me/blog/java-8-lambdas-insideout-language-features/): [原文](http://cr.openjdk.java.net/~briangoetz/lambda/lambda-state-final.html)
 
 ## default 与 多重继承
 为了扩展之前的类库使之支持一些函数式的用法, Java8 为之前的一些类库添加了一些方法(Collection.forEach()). 为了保证先前兼容性(第三方类库中为 Collection 实现了 forEach() 方法), Java8 提供了 default 两个关键字. 使得接口也可以拥有方法. 由于 class 可以继承多个 interface, 这在一定程度上实现了被 Java 摒弃的多重继承, 但是 Java8 的多重继承只能继承方法而不能继承变量(状态).
