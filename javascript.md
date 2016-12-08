@@ -31,6 +31,14 @@ a = { b: "c" };
 typeof a;               // "object"
 ```
 
+## Truthy & Falsy
+### Truthy
+1. "hello"
+2. 42
+3. [], [1, 2]  数组
+4. {}, {a:42}  对象
+5. function foo() {}  函数
+
 ## var and let
 1.var 的作用域是最近的函数块，let 是最近的闭包
 
