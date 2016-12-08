@@ -77,9 +77,23 @@ function byE40() {
     for( var nish = 0; nish < 5; nish++ ) {
         //nish is visible to the whole function
     }
-
     //nish *is* visible out here
 }
+```
+
+```js
+function foo() {
+    function bar(a) {
+        i = 3; // changing the `i` in the enclosing scope's for-loop
+        console.log( a + i );
+    }
+
+    for (let i=0; i<10; i++) {
+        bar( i * 2 ); // oops, infinite loop ahead!
+    }
+}
+
+foo();
 ```
 2.在最外层是都可以全局引用，但是在 var 会加入到 `window` 中， let 不会
 
