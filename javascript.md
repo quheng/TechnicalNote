@@ -88,7 +88,7 @@ function foo() {
         console.log( a + i );
     }
 
-    for (let i=0; i<10; i++) {
+    for (let i=0; i<10; i++) {  // var 会造成死循环
         bar( i * 2 ); // oops, infinite loop ahead!
     }
 }
