@@ -39,6 +39,12 @@ typeof a;               // "object"
 4. {}, {a:42}  对象
 5. function foo() {}  函数
 
+### Falsy
+1. "" 空字符串
+2. 0， -0，Nan
+3. null, undefine
+4. false
+
 ## var and let
 1.var 的作用域是最近的函数块，let 是最近的闭包
 
