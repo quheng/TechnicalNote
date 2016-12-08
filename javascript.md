@@ -43,6 +43,14 @@ typeof a;               // "object"
 ## 相等
 `==` 会做类型转换， `===`不会 
 
+```js
+var a = "42";
+var b = 42;
+
+a == b;         // true
+a === b;        // false
+```
+
 ### Falsy
 1. "" 空字符串
 2. 0， -0，Nan
