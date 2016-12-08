@@ -1,5 +1,36 @@
 # JavaScript
 
+## built-in type
+1. `string`
+2. `number`
+3. `boolen`
+4. `null` and `undefined`
+5. `object`
+6. `symbol` （es6）
+
+```
+var a;
+typeof a;               // "undefined"
+
+a = "hello world";
+typeof a;               // "string"
+
+a = 42;
+typeof a;               // "number"
+
+a = true;
+typeof a;               // "boolean"
+
+a = null;
+typeof a;               // "object" -- weird, bug
+
+a = undefined;
+typeof a;               // "undefined"
+
+a = { b: "c" };
+typeof a;               // "object"
+```
+
 ## var and let
 1.var 的作用域是最近的函数块，let 是最近的闭包
 
