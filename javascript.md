@@ -35,9 +35,10 @@ typeof a;               // "object"
 ### Truthy
 1. "hello"
 2. 42
-3. [], [1, 2]  数组
-4. {}, {a:42}  对象
-5. function foo() {}  函数
+3. true
+4. [], [1, 2]  数组
+5. {}, {a:42}  对象
+6. function foo() {}  函数
 
 ### Falsy
 1. "" 空字符串
