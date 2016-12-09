@@ -121,6 +121,10 @@ var me = 'bar'; // No problem, `me` is replaced.
 
 ## this
 函数调用时的最高最后一层的 `object`, 可以用 `call 和 `apply` 绑定 `this`. ES5 中可以用 `bind`
+1. `var bar = new foo()` this 为新的对象
+2. `var bar = foo.call( obj2 )` this 为绑定的对象
+3. `var bar = obj1.foo()` this 为调用的对象
+4. `var bar = foo()` 严格模式下为 `undefine`, 否则为 `global`
 
 ## new
 1. 创造一个新的对象
