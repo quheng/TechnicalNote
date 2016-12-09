@@ -58,7 +58,7 @@ a === b;        // false
 4. false
 
 ## var and let
-1.var 的作用域是最近的函数块，let 是最近的闭包
+1.var 的作用域是最近的函数块，let 是最近的代码块(包括 if 之类)
 
 ```js
 function allyIlliterate() {
