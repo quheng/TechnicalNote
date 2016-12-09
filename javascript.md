@@ -118,3 +118,6 @@ var me = 'bar'; // No problem, `me` is replaced.
 
 ## 闭包
 保存运行时 lexical scope 内变量的引用
+
+## this
+函数调用时的最高最后一层的 object.
