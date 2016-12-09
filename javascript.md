@@ -115,3 +115,6 @@ let me = 'bar'; // SyntaxError: Identifier 'me' has already been declared
 var me = 'foo';
 var me = 'bar'; // No problem, `me` is replaced.
 ```
+
+## 闭包
+保存运行时 lexical scope 内变量的引用
