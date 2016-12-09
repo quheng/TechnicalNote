@@ -121,3 +121,9 @@ var me = 'bar'; // No problem, `me` is replaced.
 
 ## this
 函数调用时的最高最后一层的 `object`, 可以用 `call 和 `apply` 绑定 `this`. ES5 中可以用 `bind`
+
+## new
+1. 创造一个新的对象
+2. 绑定 prototype
+3. 绑定 this 到新创建的对象
+4. 返回新创建的对象
