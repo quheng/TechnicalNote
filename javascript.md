@@ -120,4 +120,4 @@ var me = 'bar'; // No problem, `me` is replaced.
 保存运行时 lexical scope 内变量的引用
 
 ## this
-函数调用时的最高最后一层的 object, 可以用 call 和 apply 绑定 this.
+函数调用时的最高最后一层的 `object`, 可以用 `call 和 `apply` 绑定 `this`. ES5 中可以用 `bind`
