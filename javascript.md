@@ -138,8 +138,7 @@ function new(constructor) {
  var obj = {}
  Object.setPrototypeOf(obj, constructor.prototype)
  var argsArray = Array.from(arguments)
- constructor.apply(obj, argsArray.slice(1))
- return obj
+ return constructor.apply(obj, argsArray.slice(1)) || obj
 }
 ```
 
