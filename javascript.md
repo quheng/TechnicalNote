@@ -132,4 +132,14 @@ var me = 'bar'; // No problem, `me` is replaced.
 3. 绑定 this 到新创建的对象
 4. 返回新创建的对象
 
+
+```Javascript
+function new(constructor) {
+ var obj = {}
+ Object.setPrototypeOf(obj, constructor.prototype)
+ constructor.apply(obj, arguments.slice(1))
+ 
+}
+```
+
 new 和 call, apply 不能同时使用
