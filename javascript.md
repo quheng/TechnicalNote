@@ -137,7 +137,8 @@ var me = 'bar'; // No problem, `me` is replaced.
 function new(constructor) {
  var obj = {}
  Object.setPrototypeOf(obj, constructor.prototype)
- constructor.apply(obj, arguments.slice(1))
+ var argsArray = Array.from(arguments)
+ constructor.apply(obj, argsArray.slice(1))
  
 }
 ```
