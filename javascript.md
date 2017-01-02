@@ -164,3 +164,11 @@ function create(obj) {
     return new F();
 }
 ```
+or 
+```Javascript
+function create(proto) {
+    const obj = {}
+    Object.setProtoTypeOf(obj, proto)
+    return obj
+}
+```
