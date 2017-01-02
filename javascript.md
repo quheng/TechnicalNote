@@ -143,3 +143,5 @@ function new(constructor) {
 ```
 
 new 和 call, apply 不能同时使用
+
+## __proto__ 与 prototype
