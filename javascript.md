@@ -151,7 +151,7 @@ new 和 call, apply 不能同时使用
 
 ```JavaSript
 const obj = new Foo()
-obj.__proto__ === Foo.prototype // true
+obj.__proto__ === Foo.prototype //true
 ```
 
 ### \_\_proto\_\_
