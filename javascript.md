@@ -9,6 +9,7 @@
 6. `symbol` （es6）
 
 note: 
+除了 null 和 undefined
 BuiltInType.\_\_proto\_\_ 为内建对象
 BuiltInType.\_\_proto\_\_.\_\_proto\_\_ 为 Object
 ```
