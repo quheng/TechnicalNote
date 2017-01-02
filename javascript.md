@@ -166,9 +166,9 @@ function create(obj) {
 ```
 or 
 ```Javascript
-function create(proto) {
-    const obj = {}
-    Object.setProtoTypeOf(obj, proto)
-    return obj
+function create(obj) {
+    const temObj = {}
+    Object.setProtoTypeOf(temObj, obj)
+    return temObj
 }
 ```
