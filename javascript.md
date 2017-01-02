@@ -131,8 +131,7 @@ var me = 'bar'; // No problem, `me` is replaced.
 2. 绑定 prototype
 3. 绑定 this 到新创建的对象
 4. 返回新创建的对象
-
-
+我们可以这样实现 new：
 ```Javascript
 function new(constructor) {
  var obj = {}
@@ -153,3 +152,11 @@ prototype 属于 Function, 只用在 new foo() 中，用来实现 OOP 中的 cla
 
 ## Object.create()
 用一个对象作为\_\_proto\_\_创建一个对象
+我们可以这样实现 Object.create(), ----- by《JavaScript高级程序设计》P169
+```Javascript
+function create(obj) {
+    function temF() {}
+    temF.prototype = obj
+    return new F();
+}
+```
