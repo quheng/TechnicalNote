@@ -146,7 +146,7 @@ new 和 call, apply 不能同时使用
 
 ## \_\_proto\_\_ 与 prototype
 ### \_\_proto\_\_
-\_\_proto\_\_ 属于 Object, 可以使用 Object.setPrototypeOf() 来改变，用来实现 OOP 的类层级结构
+\_\_proto\_\_ 访问属于任意对象的[[prototype]], 可以使用 Object.setPrototypeOf() 来改变，用来实现 OOP 的类层级结构
 ### prototype
 prototype 属于 Function, 只用在 new foo() 中，用来实现 OOP 中的 class， 作为返回值的 \_\_proto\_\_
 ![](/assets/21B10292-38FD-479E-AF9E-CB870B865974.png)
