@@ -8,6 +8,9 @@
 5. `object`
 6. `symbol` （es6）
 
+note: 
+BuiltInType.\_\_proto\_\_ 为内建对象
+BuiltInType.\_\_proto\_\_.\_\_proto\_\_ 为 Object
 ```
 var a;
 typeof a;               // "undefined"
