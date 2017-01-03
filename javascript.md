@@ -161,6 +161,7 @@ new 和 call, apply 不能同时使用
 ## \_\_proto\_\_ 与 prototype
 
 ```JavaSript
+function foo () {}
 const obj = new Foo()
 obj.__proto__ === Foo.prototype // true
 obj.__proto__.constructor === Object // true
