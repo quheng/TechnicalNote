@@ -211,3 +211,5 @@ function create(obj) {
 ### Function
 `Function` 是所有 function object 的构造函数包括 `Function` 自身。
 
+### 总结
+
