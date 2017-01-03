@@ -131,7 +131,7 @@ var me = 'bar'; // No problem, `me` is replaced.
 
 ## 闭包
 
-保存运行时 lexical scope 内变量的引用
+保存运行时 lexical scope 内变量的引用，闭包是用函数调用栈来实现的，注意和实现继承的`__proto__`区别开来。
 
 ## this
 在不考虑 bind 时，函数的调用者, 默认是 global
