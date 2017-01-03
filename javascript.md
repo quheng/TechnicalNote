@@ -9,7 +9,7 @@
 5. `object`
 6. `symbol` （es6）
 
-note:   
+note:  
 除了 null 和 undefined  
 BuiltInType.\_\_proto\_\_ 为内建对象  
 BuiltInType.\_\_proto\_\_.\_\_proto\_\_ 为 Object
@@ -135,9 +135,9 @@ var me = 'bar'; // No problem, `me` is replaced.
 
 ## this
 
-函数调用时的最高最后一层的 `object`, 可以用 `call 和`apply`绑定`this`. ES5 中可以用`bind`1.`var bar = new foo\(\)`this 为新的对象  
-2.`var bar = foo.call\( obj2 \)`this 为绑定的对象  
-3.`var bar = obj1.foo\(\)`this 为调用的对象  
+函数调用时的最高最后一层的 `object`, 可以用 `call 和`apply`绑定`this`. ES5 中可以用`bind`1.`var bar = new foo\(\)`this 为新的对象    
+2.`var bar = foo.call\( obj2 \)`this 为绑定的对象    
+3.`var bar = obj1.foo\(\)`this 为调用的对象    
 4.`var bar = foo\(\)`严格模式下为`undefine`, 否则为`global\`
 
 ## new
@@ -163,6 +163,7 @@ new 和 call, apply 不能同时使用
 ```JavaSript
 const obj = new Foo()
 obj.__proto__ === Foo.prototype //true
+Object.__proto__.__proto__ === Object.prototype
 ```
 
 ### \_\_proto\_\_
