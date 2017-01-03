@@ -205,4 +205,4 @@ function create(obj) {
 `Object` 是一个函数，先有的`Object.prototype`， `Object.prototype`构造出`Function.prototype`，然后`Function.prototype`构造出`Object`和`Function`。
 
 ## Function
-`Function` 是所有 function object 的构造函数
+`Function` 是所有 function object 的构造函数包括 `Function` 自身。
