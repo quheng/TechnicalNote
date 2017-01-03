@@ -225,12 +225,29 @@ foo.constructor === Function
 foo.__proto__ === Function.prototype
 foo.prototype // 这个比较特殊, 是一个继承自 Object（foo.prototype.__proto__ === Object.prototype）的新对象，用来构造下一个对象，原型继承中关键的一环
 
-# new 出来的对象
+// new 出来的对象
 a = new foo()
 a.constructor === foo
 a.__proto__ === foo.prototype // 搭配 foo.prototype 食用更佳
-a.prototype === undefine
+a.prototype === undefined
 
+// Function
+Function.__proto__ === Function.prototype // Function 继承自 Function.prototype
+Function.prototype // 一切构造函数的源头
+Function.constructor === Function // Function 构造了自己
 
+// Object
+Object.constructor === Function
+Object.__proto__ === Function.prototype // [[prototype]] 为构造函数的 prototype
+Object.prototype // 一切的源头
 
+// Function.prototype
+Function.prototype.constructor === Function // Function 构造了万物
+Function.prototype.prototype === undefined // 构造函数的终点 
+Function.prototype.__proto__ === Object.prototype // 万物的终点
+
+// Object.prototype
+Object.prototype.constructor === Object
+Object.prototype.__proto__ === null // 万物的终点
+Object.prototype.prototype === undefined // 对象没有 prototype
 ```
