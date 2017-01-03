@@ -158,7 +158,7 @@ var me = 'bar'; // No problem, `me` is replaced.
 
 new 和 call, apply 不能同时使用
 
-## \_\_proto\_\_ 与 prototype
+## 各种东西之间的关系
 
 ```JavaSript
 function foo () {}
@@ -167,6 +167,7 @@ obj.__proto__ === Foo.prototype // true
 obj.__proto__.constructor === Object // true
 Object.__proto__.__proto__ === Object.prototype // true
 Object.__proto__ === Function.prototype // true
+
 Function.__proto__ === Function.prototype // true
 foo.constructor === Function // true
 Function.constructor === Function // true
@@ -203,8 +204,10 @@ function create(obj) {
     return temObj
 }
 ```
-## Object 和 Object.__prototype__
-`Object` 是一个函数，先有的`Object.prototype`， `Object.prototype`构造出`Function.prototype`，然后`Function.prototype`构造出`Object`和`Function`。
+## Object 和 Object.prototype
+准确的说法是 JavaScript 里的所有东西都是 `Object.prototype`, 而
+`Object` 只是一个函数。先有的`Object.prototype`， `Object.prototype`构造出`Function.prototype`，然后`Function.prototype`构造出`Object`和`Function`。
 
 ## Function
 `Function` 是所有 function object 的构造函数包括 `Function` 自身。
+
