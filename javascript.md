@@ -167,7 +167,7 @@ obj.__proto__.constructor === Object // true
 Object.__proto__.__proto__ === Object.prototype // true
 Object.__proto__ === Function.prototype // true
 Function.__proto__ === Function.prototype // true
-Function.constructor == Function // true
+Function.constructor === Function // true
 ```
 
 ### \_\_proto\_\_
