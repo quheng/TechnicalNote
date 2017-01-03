@@ -163,7 +163,7 @@ new 和 call, apply 不能同时使用
 ```JavaSript
 const obj = new Foo()
 obj.__proto__ === Foo.prototype // true
-
+obj.__proto__.constructor === Object // true
 Object.__proto__.__proto__ === Object.prototype // true
 Object.__proto__ === Function.prototype // true
 ```
@@ -199,7 +199,4 @@ function create(obj) {
     return temObj
 }
 ```
-
-## Object 和 Object()
-
 
