@@ -182,7 +182,7 @@ Function.constructor === Function // true
 prototype 属于 Function, 只用在 new foo\(\) 中，用来实现 OOP 中的 class，作为返回值的 \_\_proto\_\_  
 ![](/assets/21B10292-38FD-479E-AF9E-CB870B865974.png)
 
-## Object.create\(\)
+### Object.create\(\)
 
 用一个对象作为\_\_proto\_\_创建一个对象  
 我们可以这样实现 Object.create\(\), ----- by《JavaScript高级程序设计》P169
@@ -204,10 +204,10 @@ function create(obj) {
     return temObj
 }
 ```
-## Object 和 Object.prototype
+### Object 和 Object.prototype
 准确的说法是 JavaScript 里的所有东西都是 `Object.prototype`, 而
 `Object` 只是一个函数。先有的`Object.prototype`， `Object.prototype`构造出`Function.prototype`，然后`Function.prototype`构造出`Object`和`Function`。
 
-## Function
+### Function
 `Function` 是所有 function object 的构造函数包括 `Function` 自身。
 
