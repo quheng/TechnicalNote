@@ -251,3 +251,6 @@ Object.prototype.constructor === Object
 Object.prototype.__proto__ === null // 万物的终点
 Object.prototype.prototype === undefined // 对象没有 prototype
 ```
+两个疑问
+1. Object.prototype.constructor === Object
+2. Function.prototype.constructor === Function
