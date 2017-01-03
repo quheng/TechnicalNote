@@ -212,4 +212,20 @@ function create(obj) {
 `Function` 是所有 function object 的构造函数包括 `Function` 自身。
 
 ### 总结
+```
+# 直接定义的对象
+a = {}
+a.constructor === Object
+a.__proto__ === Object.prototype
+a.prototype === undefine
 
+# 直接定义的函数
+function foo () {}
+foo.constructor === Function
+foo.__proto__ === Function.prototype
+
+
+# new 出来的对象
+
+
+```
