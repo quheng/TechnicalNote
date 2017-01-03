@@ -213,19 +213,24 @@ function create(obj) {
 
 ### 总结
 ```
-# 直接定义的对象
+// 直接定义的对象
 a = {}
 a.constructor === Object
 a.__proto__ === Object.prototype
 a.prototype === undefine
 
-# 直接定义的函数
+// 直接定义的函数
 function foo () {}
 foo.constructor === Function
 foo.__proto__ === Function.prototype
-
+foo.prototype // 这个比较特殊, 是一个继承自 Object（foo.prototype.__proto__ === Object.prototype）的新对象，用来构造下一个对象，原型继承中关键的一环
 
 # new 出来的对象
+a = new foo()
+a.constructor === foo
+a.__proto__ === foo.prototype // 搭配 foo.prototype 食用更佳
+a.prototype === undefine
+
 
 
 ```
