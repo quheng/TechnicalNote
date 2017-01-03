@@ -199,4 +199,4 @@ function create(obj) {
     return temObj
 }
 ```
-
+## Object 和 Object.__prototype__
