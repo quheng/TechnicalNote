@@ -134,7 +134,7 @@ var me = 'bar'; // No problem, `me` is replaced.
 保存运行时 lexical scope 内变量的引用
 
 ## this
-函数调用者的通过`__proto__`可以访问到值
+在不考虑 bind 时，函数的调用者, 默认是 global
 
 可以用 `call 和`apply`绑定`this`. ES5 中可以用`bind`1.`var bar = new foo\(\)`this 为新的对象            
 2.`var bar = foo.call\( obj2 \)`this 为绑定的对象            
