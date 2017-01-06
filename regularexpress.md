@@ -17,6 +17,8 @@
 # |
 `(data|date)` 等价于 (dat[ae]), `|` 更适合长单词的选择, `[]` 只针对一个字母, 对选分支可以连续使用, 如 `(test|task|tee)`
 
+# \?
+注意, 在 egrep 中是 `?`. 匹配一次或不匹配. 如 `colou\?r` 可以匹配 'color' 和 'colour'
 
 ## grep
 ## -i
