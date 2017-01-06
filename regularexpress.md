@@ -36,3 +36,5 @@
 ## -i
 忽略大小写
 
+## 建议
+1. `alias grep='egrep --color=always'`
