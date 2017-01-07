@@ -22,6 +22,7 @@ e.g.
 ## sort
 
 ## jq 
+处理 json 文件
 sample
 
 ```
