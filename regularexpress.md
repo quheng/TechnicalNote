@@ -49,9 +49,5 @@ unicode 属性
 ![unicode properties](/assets/QQ20170108-0@2x.png)
 ![unicode properties2](/assets/QQ20170108-1@2x.png)
 
-## grep
-## -i
-忽略大小写
-
 ## 建议
 1. `alias grep='egrep --color=always'`
