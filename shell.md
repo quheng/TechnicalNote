@@ -34,3 +34,8 @@ cat s6.txt | cut -f 2 -d '|' | jq '.logistics_address_search_response.addresses.
 
 ## lsof
 1. lsof -i :8080 查看占用了 8080 端口的进程
+
+## grep
+1. -i 忽略大小写
+2. -v 输出未选中
+
