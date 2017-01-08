@@ -149,6 +149,7 @@ instance BasicEq Bool where
 1. Show 转成 String, 可以用 show 函数将 Show 转成 String
 2. Read 读取 String, 可以用 read 函数将 String 转成一个 data
 3. Functor 提供遍历数据结构的方法, 可以用 fmap 来遍历整个数据结构, list([]) 的 fmap 就是 map.注意 functors 必须是可识别的(identity) 即 fmap id data 必须得到 data(数据类型相同) . 另外 functor 必须是可组合的(composable) 即 fmap f . fmap g 等价于 fmap (f . g)
+4. monad 实现了 flatmap.
 
 ### type data newType
 1. type 只是取一个别名
