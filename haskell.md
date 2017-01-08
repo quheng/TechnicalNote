@@ -206,6 +206,7 @@ inpStr <- getLine   --getLine :: IO String
 ### "<<="
 
 ## list
+最常用的 functor, fmap 为 list([])
 
 ### note
 list 嵌套 list 时, 内部 list 元素的数量可以不一样, 但是数据类型必须一样, 因为它们的类型都是 `[a]`.
