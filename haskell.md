@@ -205,11 +205,6 @@ inpStr <- getLine   --getLine :: IO String
 
 ### "<<="
 
-
-## monad
-
-
-
 ## list
 
 ### note
