@@ -17,4 +17,5 @@
 * [JavaScript](javascript.md)
 * [RegularExpress](regularexpress.md)
 * [FP](fp.md)
+* category theory
 
