@@ -15,17 +15,7 @@
 
 ### epimorphism
 也可以称作'epic morphism'
-对应集合论中的 surjective (or onto), 满射. 回顾一下满射 $$\forall y \in Y, \exists y \in Y, f(x)=y $$. 由于 category theory 不关心具体的
-
-
-
-
-
-
-
-
-
-
+对应集合论中的 surjective (or onto), 满射. 回顾一下满射 $$\forall y \in Y, \exists y \in Y, f(x)=y $$. 由于 category theory 不关心具体的元素, 我们不能用具体的 x 和 y 来形容 epimorphism. 
 
 
 
