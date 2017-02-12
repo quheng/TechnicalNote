@@ -1,6 +1,7 @@
 # Category theory
 
-identical and composition
+范畴论, 通俗的来讲, category theory 是忽略了集合内细节的集合论, 将集合视作一个整体, 着重于集合和集合之间的变换, 而不关心集合内具体的元素. 集合论中的术语多来自于拉丁语, 而范畴论中多来自于希腊语.
+
 
 
 ## words and notation
