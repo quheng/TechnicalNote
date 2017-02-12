@@ -10,8 +10,11 @@
 
 ### 组合 composition
 组合: `g.f` 或者是'f∘g', 读作 g after f, 表示g(f(x)). 满足一下两个原则, 
-1. Identity: 存在 morphism `id_a::a->a`, 使得 `id_b . f = f = f . id_a`, id_a 又叫做 'isomorphism'
+1. Identity: 存在 morphism `id_a::a->a`, 使得 `id_b . f = f = f . id_a`
 2. Associativity: `(f.g).h = f.(g.h)`
+
+### isomorphism
+isomorphism 同构. 若 `f::a->b`, 存在 `g::b->a` 使得 `g.f = id_a, f.g = id_b` 则称 'f' or 'g'is isomorphism
 
 ### epimorphism
 也可以称作'epic morphism'
@@ -25,7 +28,7 @@
 ## words and notation
 1. `g.f` 或者是圆圈读作 g after f, 表示g(f(x))
 2. morphism 映射, arrow, function
-3. isomorphism 同构. 若 `f::a->b`, 存在 `g::b->a` 使得 `g.f = id_a f.g = id_b` 则称 `f` is isomorphism
+3. 
 4. injective, 单射. 对于任意的 a, b. `f(a) != f(b)`. 希腊语 `monomorphism` or `monic morphism`
 5. 
 
