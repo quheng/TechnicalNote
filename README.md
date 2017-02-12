@@ -15,7 +15,8 @@ x = x + 1
 
 z
 一个简单的例子
-```c-pseudo
+
+```
 for (double i = 0; i <= MAX_DOUBLE; i++) {
 }
 ```
