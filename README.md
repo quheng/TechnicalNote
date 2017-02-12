@@ -25,6 +25,7 @@ isomorphism 同构. 若 `f::a->b`, 存在 `g::b->a` 使得 `g.f = id_a, f.g = id
 也可以称作'monic morphism'
 对应集合论中的, injective, 单射. 对于任意的 a, b. `f(a) != f(b)`. 通俗的说是一一对应.
 
-
+## Reference
+1. https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
 
 
