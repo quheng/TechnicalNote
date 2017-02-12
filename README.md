@@ -8,7 +8,10 @@
 
 以集合论中的 function 举例. 在集合论中, 我们常说 $$f(x) x\in S $$ 来表示对集合 S 中的某个元素进行变换. 而在范畴论中的 'morphism' 确不会关心集合 S 中的具体元素 x, 而只说 `f::a->b` 表示从集合 a 到 b 的一个变换. 这里说的集合, 翻译自 category, type, class 等等.
 
-### axioms
+### 组合 composition
+组合: `g.f` 或者是'f∘g', 读作 g after f, 表示g(f(x)). 满足一下两个原则, 
+1. Identity: 存在 morphism `id_a::a->a`, 使得 `id_b . f = f = f . id_a`
+2. Associativity: `(f.g).h = f.(g.h)`
 
 
 ## words and notation
