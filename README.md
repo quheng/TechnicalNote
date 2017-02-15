@@ -48,7 +48,9 @@ isomorphism 同构. 若 `f::a->b`, 存在 `g::b->a` 使得 `g.f = id_a, f.g = id
 
 ### monomorphism
 也可以称作'monic morphism'
-对应集合论中的, injective, 单射. 对于任意的 a, b. `f(a) != f(b)`. 通俗的说是一一对应.
+对应集合论中的, injective, 单射. 对于任意的 a, b. `f(a) != f(b)`. 通俗的说是一一对应. 和 epimorphism 一样, 我们关注与源域中未被映射的地方. ![](/assets/QQ20170215-210033.png)
+因此我们可以说, 如果`f is monomorphism, f.g_1 = f.g_2 if and only if g_1 = g_2`
+
 
 ## Reference
 1. https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
