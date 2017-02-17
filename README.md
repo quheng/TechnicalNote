@@ -47,6 +47,11 @@ isomorphism 同构. 若 `f::a->b`, 存在 `g::b->a` 使得 `g.f = id_a, f.g = id
 对应集合论中的 surjective (or onto), 满射. 回顾一下满射 $$\forall y \in Y, \exists y \in Y, f(x)=y $$. 通俗来说就是目标充满了整个目标域. 由于 category theory 不关心具体的元素, 我们不能用具体的 x 和 y 来形容 epimorphism. 这里用一个小技巧来描述 epimorphism. 若一个 morphism 不是 epimorphism, 我们关注没被映射到的目标域. ![](/assets/QQ20170213-002703@2x.png)
 由于不是 epimorphism, 那么消除了不同 morphism 在没被映射到的目标域中的差异, 使得`g_1.f = g_2.f, g_1 != g_2`. 因此我们可以说, 如果`f is epimorphism, g_1.f  = g_2.f if and only if g_1 = g_2`, 这里利用了非满射的取消性 [cancellative](https://en.wikipedia.org/wiki/Cancellation_property)
 
+## 插曲: 群论
+补充一点相关知识
+
+### 群
+
 ### monomorphism
 也可以称作'monic morphism'
 对应集合论中的, injective, 单射. 对于任意的 a, b. `f(a) != f(b)`. 通俗的说是一一对应. 和 epimorphism 一样, 我们关注与源域中未被映射的地方. ![](/assets/QQ20170215-210033.png)
