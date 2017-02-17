@@ -53,10 +53,13 @@ isomorphism 同构. 若 `f::a->b`, 存在 `g::b->a` 使得 `g.f = id_a, f.g = id
 ### 群
 群(group)的定义是, 设 G 为非空集合，如果在 G 上定义的二元运算 *，满足
 1. 封闭性(Closure): 对于任意 a, b 属于 G, 都有 a * b 属于 G
-2. 结合律(Associativity): 对于任意 a, b, c 属于 G, 有 (a * b) * c = a * (b * c)
-3. 幺元(Identity element): 存在幺元 e, 使得任意 a 属于 G, e * a = a * e = a
-4. 逆元(Inverse element): 存在逆元 -a, 使得 a * (-a) = (-a) * a = e
-则称(G, *) 是群, 简称 G 是群. 如果仅满足封闭性和结合率, 则称 G 是一个半群(Semigroup), 如果满足封闭性, 结合律并有幺元, 则称 G 是一个含幺半群(Monoid), 或者叫幺半群. 
+2. 结合律(Associativity): 对于任意 a, b, c 属于 G, 有 (a \* b) \* c = a \* (b \* c)
+3. 幺元(Identity element): 存在幺元 e, 使得任意 a 属于 G, e \* a = a \* e = a
+4. 逆元(Inverse element): 存在逆元 -a, 使得 a \* (-a) = (-a) \* a = e
+则称(G, \*) 是群, 简称 G 是群. 如果仅满足封闭性和结合率, 则称 G 是一个半群(Semigroup), 如果满足封闭性, 结合律并有幺元, 则称 G 是一个含幺半群(Monoid), 或者叫幺半群. 
+
+### 范畴论与群论
+我们把 morphism 之间的组合定义为运算 \*. 很容易得到 Monoid M(G, \*).
 
 ### monomorphism
 也可以称作'monic morphism'
