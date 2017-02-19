@@ -12,3 +12,6 @@ fmt.Println(a)
 fmt.Println(b)
 // [0]
 ```
+
+## reference
+1. https://blog.golang.org/go-slices-usage-and-internals
