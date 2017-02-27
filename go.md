@@ -21,7 +21,7 @@ d, err := f.Stat()
 err 可以被定义两次, 只要
 1. 两次定义在同一个范围内
 2. 值被初始化给了对应变量
-3. 第二次定义时, 同时定义了两个或以上变量.
+3. 第二次定义时, 同时定义了两个或以上变量
 
 ## reference
 1. https://blog.golang.org/go-slices-usage-and-internals
