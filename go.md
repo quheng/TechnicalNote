@@ -15,4 +15,4 @@ fmt.Println(b)
 
 ## reference
 1. https://blog.golang.org/go-slices-usage-and-internals
-2. 
+2. https://golang.org/doc/effective_go.html
