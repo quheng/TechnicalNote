@@ -28,6 +28,18 @@ err 可以被定义两次, 只要
 2. In particular, if you pass an array to a function, it will receive a copy of the array, not a pointer to it.
 3. The size of an array is part of its type. The types [10]int and [20]int are distinct.
 
+### Allocate 2-D slice
+```
+// Allocate the top-level slice, the same as before.
+picture := make([][]uint8, YSize) // One row per unit of y.
+// Allocate one large slice to hold all the pixels.
+pixels := make([]uint8, XSize*YSize) // Has type []uint8 even though picture is [][]uint8.
+// Loop over the rows, slicing each row from the front of the remaining pixels slice.
+for i := range picture {
+	picture[i], pixels = pixels[:XSize], pixels[XSize:]
+}
+```
+
 ## reference
 1. https://blog.golang.org/go-slices-usage-and-internals
 2. https://golang.org/doc/effective_go.html
