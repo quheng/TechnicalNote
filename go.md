@@ -23,6 +23,11 @@ err 可以被定义两次, 只要
 2. 值被初始化给了对应变量
 3. 第二次定义时, 同时定义了两个或以上变量
 
+## Array
+1. Arrays are values. Assigning one array to another copies all the elements.
+2. In particular, if you pass an array to a function, it will receive a copy of the array, not a pointer to it.
+3. The size of an array is part of its type. The types [10]int and [20]int are distinct.
+
 ## reference
 1. https://blog.golang.org/go-slices-usage-and-internals
 2. https://golang.org/doc/effective_go.html
