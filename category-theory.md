@@ -42,6 +42,8 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 ### 同构 isomorphism
 若两个群(G, \*) 与 (E, +) 若存在映射 f: G -> E, 使得 f(a \* b ) = f(a) + f(b) 对于任意 a, b 属于 G 成立, 且 f 是双射.
 
+### 同态 homomorhpism
+
 
 ## morphism
 映射, 因为多用箭头表示, 也常叫做 'arrow'. 下文多用 [Haskell](https://www.haskell.org) 的语法表示.
