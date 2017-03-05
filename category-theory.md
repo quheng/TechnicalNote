@@ -52,6 +52,8 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 4. 自同态（endomorphism）：任何同态f : X -> X称为X上的一个自同态。
 5. 自同构（automorphism）：若一个自同态也是同构的，那么称之为自同构。
 
+## 环
+
 ## redo
 
 ## morphism
