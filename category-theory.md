@@ -31,8 +31,8 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 ## 插曲: 群论
 补充一点相关知识
 
-### 群
-群(group)的定义是, 设 G 为非空集合，如果在 G 上定义的二元运算 \*，满足
+### 群 group
+群的定义是, 设 G 为非空集合，如果在 G 上定义的二元运算 \*，满足
 1. 封闭性(Closure): 对于任意 a, b 属于 G, 都有 a \* b 属于 G
 2. 结合律(Associativity): 对于任意 a, b, c 属于 G, 有 (a \* b) \* c = a \* (b \* c)
 3. 幺元(Identity element): 存在幺元 e, 使得任意 a 属于 G, e \* a = a \* e = a
@@ -52,7 +52,7 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 4. 自同态（endomorphism）：任何同态f : X -> X称为X上的一个自同态。
 5. 自同构（automorphism）：若一个自同态也是同构的，那么称之为自同构。
 
-## 环
+## 环 ring
 若集合 R 非空, 定义运算 +, 和 \*, 满足如下条件
 1. G(R, +) 是阿贝尔群
 2. G(R, \*) 是半群
