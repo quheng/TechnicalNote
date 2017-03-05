@@ -39,6 +39,9 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 4. 逆元(Inverse element): 存在逆元 -a, 使得 a \* (-a) = (-a) \* a = e
 则称(G, \*) 是群, 简称 G 是群. 如果仅满足封闭性和结合率, 则称 G 是一个半群(Semigroup), 如果满足封闭性, 结合律并有幺元, 则称 G 是一个含幺半群(Monoid), 或者叫幺半群. 
 
+### 同构 isomorphism
+若两个群(G, *) 与 (E, +) 若存在映射 f: G -> E, 使得 f(a \* b) 
+
 
 ## morphism
 映射, 因为多用箭头表示, 也常叫做 'arrow'. 下文多用 [Haskell](https://www.haskell.org) 的语法表示.
