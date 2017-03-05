@@ -28,6 +28,18 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 通俗的来讲, 范畴是忽略了集合内细节的集合论, 将集合视作一个整体, 着重于集合和集合之间的变换, 而不关心集合内具体的元素. 集合论中的术语多来自于拉丁语, 而范畴论中多来自于希腊语.因此需要注意的是在 category theory 中, 即使是小写字母, 也用来表示一个集合, 而不是在我们熟悉集合论中大写字母是集合, 小写字母是元素. 在函数是编程语言中多用 category 来抽象类型系统. 
 范畴论中会用到许多群论, 集合论相关的知识, 但是正如之前我们所说的, 范畴论忽略内部细节, 关注不同 category 之间的转换. 我们通常是将这些转换放入群之中, 谨记这一点会好理解很多.
 
+## 插曲: 群论
+补充一点相关知识
+
+### 群
+群(group)的定义是, 设 G 为非空集合，如果在 G 上定义的二元运算 \*，满足
+1. 封闭性(Closure): 对于任意 a, b 属于 G, 都有 a \* b 属于 G
+2. 结合律(Associativity): 对于任意 a, b, c 属于 G, 有 (a \* b) \* c = a \* (b \* c)
+3. 幺元(Identity element): 存在幺元 e, 使得任意 a 属于 G, e \* a = a \* e = a
+4. 逆元(Inverse element): 存在逆元 -a, 使得 a \* (-a) = (-a) \* a = e
+则称(G, \*) 是群, 简称 G 是群. 如果仅满足封闭性和结合率, 则称 G 是一个半群(Semigroup), 如果满足封闭性, 结合律并有幺元, 则称 G 是一个含幺半群(Monoid), 或者叫幺半群. 
+
+
 ## morphism
 映射, 因为多用箭头表示, 也常叫做 'arrow'. 下文多用 [Haskell](https://www.haskell.org) 的语法表示.
 集合论中称作 'function', 线性代数中的 '线性变换, linear transformations', 群论( group theory) 中的 'group homomorphisms', 拓扑学(topology) 中的 'continuous functions'. 与这些术语在大的概念上一致, 在细节上却有很大不同.
@@ -47,19 +59,6 @@ isomorphism 同构. 若 `f::a->b`, 存在 `g::b->a` 使得 `g.f = id_a, f.g = id
 对应集合论中的 surjective (or onto), 满射. 回顾一下满射 $$\forall y \in Y, \exists y \in Y, f(x)=y $$. 通俗来说就是目标充满了整个目标域. 由于 category theory 不关心具体的元素, 我们不能用具体的 x 和 y 来形容 epimorphism. 这里用一个小技巧来描述 epimorphism. 若一个 morphism 不是 epimorphism, 我们关注没被映射到的目标域. ![](/assets/QQ20170213-002703@2x.png)
 由于不是 epimorphism, 那么消除了不同 morphism 在没被映射到的目标域中的差异, 使得`g_1.f = g_2.f, g_1 != g_2`. 因此我们可以说, 如果`f is epimorphism, g_1.f  = g_2.f if and only if g_1 = g_2`, 这里利用了非满射的取消性 [cancellative](https://en.wikipedia.org/wiki/Cancellation_property)
 
-## 插曲: 群论
-补充一点相关知识
-
-### 群
-群(group)的定义是, 设 G 为非空集合，如果在 G 上定义的二元运算 \*，满足
-1. 封闭性(Closure): 对于任意 a, b 属于 G, 都有 a \* b 属于 G
-2. 结合律(Associativity): 对于任意 a, b, c 属于 G, 有 (a \* b) \* c = a \* (b \* c)
-3. 幺元(Identity element): 存在幺元 e, 使得任意 a 属于 G, e \* a = a \* e = a
-4. 逆元(Inverse element): 存在逆元 -a, 使得 a \* (-a) = (-a) \* a = e
-则称(G, \*) 是群, 简称 G 是群. 如果仅满足封闭性和结合率, 则称 G 是一个半群(Semigroup), 如果满足封闭性, 结合律并有幺元, 则称 G 是一个含幺半群(Monoid), 或者叫幺半群. 
-
-### 范畴论与群论
-我们把 morphism 之间的组合定义为运算 \*. 很容易得到 Monoid M(G, \*). 通过把 category 放到群中, 我们可以方便的研究组合不同 morphism.
 
 ## Kleisli category
 
