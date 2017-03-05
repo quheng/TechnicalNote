@@ -47,6 +47,9 @@ Go 被直接编译为原生机器码, 没有类似 Java 的虚拟机环境. 但�
 https://golang.org/doc/faq#stack_or_heap
 我们不(需要)知道变量的位置, 这都是由编译器决定的, 没有语法来做这件事情. 这使得函数可以返回任何变量的指针, 这在 `c` 中是不可以的(在函数结束后会被销毁).
 
+## T or *T
+T 只有定义在 T 上的方法, *T 包含定义在 T 和 \*T 上的方法
+
 ## reference
 1. https://blog.golang.org/go-slices-usage-and-internals
 2. https://golang.org/doc/effective_go.html
