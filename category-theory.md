@@ -39,12 +39,16 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 4. 逆元(Inverse element): 存在逆元 -a, 使得 a \* (-a) = (-a) \* a = e
 则称(G, \*) 是群, 简称 G 是群. 如果仅满足封闭性和结合率, 则称 G 是一个半群(Semigroup), 如果满足封闭性, 结合律并有幺元, 则称 G 是一个含幺半群(Monoid), 或者叫幺半群. 
 
-### 同构 isomorphism
-若两个群(G, \*) 与 (E, +) 若存在映射 f: G -> E, 使得 f(a \* b ) = f(a) + f(b) 对于任意 a, b 属于 G 成立, 且 f 是双射.
-
 ### 同态 homomorphism
-同态是两个代数结构（例如群、环、或者向量空间）之间的保持结构不变的映射。两个群(G, \*) 与 (E, +) 若映射 f: G -> E, 使得 f(a \* b ) = f(a) + f(b), 则称 f 为同态映射, 简称同态. 集合$$ker = {g \in G | f(g) = e, e为集合 E 的单位元}$$ 称为同态 f 的核.
-值得注意的是同态 f 不一定是双射, 但同构要求映射为双射. 
+同态是从一个代数结构(例如群、环、或者向量空间)到同类代数结构的映射，它保持所有相关的结构不变；也即，所有诸如幺元、逆元、和二元运算之类的属性不变。两个群(G, \*) 与 (E, +) 若映射 f: G -> E, 使得 f(a \* b ) = f(a) + f(b), 则称 f 为同态映射, 简称同态. 集合$$ker = {g \in G | f(g) = e, e为集合 E 的单位元}$$ 称为同态 f 的核. kerf 是 G 的一个子群.
+
+### 同构 isomorphism
+如果两个代数结构的同态是双射的, 那么这两个代数结构被称为同构。同构的对象就其上的结构而言是无法区分的。
+
+### 其他特殊的同态
+
+
+## redo
 
 ## morphism
 映射, 因为多用箭头表示, 也常叫做 'arrow'. 下文多用 [Haskell](https://www.haskell.org) 的语法表示.
@@ -65,13 +69,9 @@ isomorphism 同构. 若 `f::a->b`, 存在 `g::b->a` 使得 `g.f = id_a, f.g = id
 对应集合论中的 surjective (or onto), 满射. 回顾一下满射 $$\forall y \in Y, \exists y \in Y, f(x)=y $$. 通俗来说就是目标充满了整个目标域. 由于 category theory 不关心具体的元素, 我们不能用具体的 x 和 y 来形容 epimorphism. 这里用一个小技巧来描述 epimorphism. 若一个 morphism 不是 epimorphism, 我们关注没被映射到的目标域. ![](/assets/QQ20170213-002703@2x.png)
 由于不是 epimorphism, 那么消除了不同 morphism 在没被映射到的目标域中的差异, 使得`g_1.f = g_2.f, g_1 != g_2`. 因此我们可以说, 如果`f is epimorphism, g_1.f  = g_2.f if and only if g_1 = g_2`, 这里利用了非满射的取消性 [cancellative](https://en.wikipedia.org/wiki/Cancellation_property)
 
-
-## Kleisli category
-
-
 ### monomorphism
 也可以称作'monic morphism'
-对应集合论中的, injective, 单射. 对于任意的 a, b. `f(a) != f(b)`. 通俗的说是一一对应. 和 epimorphism 一样, 我们关注与源域中未被映射的地方. ![](/assets/QQ20170215-210033.png)
+对应集合论中的, injective, 单射. 对于任意的 a, b. `f(a) != f(b)`. 和 epimorphism 一样, 我们关注与源域中未被映射的地方. ![](/assets/QQ20170215-210033.png)
 因此我们可以说, 如果`f is monomorphism, f.g_1 = f.g_2 if and only if g_1 = g_2`
 
 
