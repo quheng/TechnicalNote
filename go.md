@@ -40,6 +40,10 @@ for i := range picture {
 }
 ```
 
+## runtime
+GO 被直接编译为原生机器码, 没有类似 Java 的虚拟机环境. 但是 GO 有一个库叫做`runtime`, 这并不是通常意义上的 runtime, 只是为 GO 提供垃圾回收, 堆栈管理, 并发等语言特性.
+
 ## reference
 1. https://blog.golang.org/go-slices-usage-and-internals
 2. https://golang.org/doc/effective_go.html
+3. https://golang.org/doc/faq
