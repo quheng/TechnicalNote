@@ -41,7 +41,10 @@ for i := range picture {
 ```
 
 ## runtime
-GO 被直接编译为原生机器码, 没有类似 Java 的虚拟机环境. 但是 GO 有一个库叫做`runtime`, 这并不是通常意义上的 runtime, 只是为 GO 提供垃圾回收, 堆栈管理, 并发等语言特性.
+Go 被直接编译为原生机器码, 没有类似 Java 的虚拟机环境. 但是 Go 有一个库叫做`runtime`, 这并不是通常意义上的 runtime, 只是为 Go 提供垃圾回收, 堆栈管理, 并发等语言特性.
+
+## stack or heap
+[stack_or_heap](https://golang.org/doc/faq#stack_or_heap) 我们不(需要)知道变量的位置, 这都是由编译器决定的, 没有语法来做这件事情. 这使得函数可以返回任何变量的指针, 这在 `c` 中是不可以的(在函数结束后会被销毁).
 
 ## reference
 1. https://blog.golang.org/go-slices-usage-and-internals
