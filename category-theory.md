@@ -71,6 +71,8 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 ## 范畴 catagory
 1. 一系列对象(object)的集合
 2. 一系列箭头(arrow) 又叫做映射(morphism)
+3. 与映射有关的域(domain)和陪域(codomain)
+
 
 ## morphism
 映射, 因为多用箭头表示, 也常叫做 'arrow'. 下文多用 [Haskell](https://www.haskell.org) 的语法表示.
