@@ -74,6 +74,7 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 3. 与映射有关的域(domain)和陪域(codomain)
 4. 箭头是可以合成的, 即 f(gh) = (fg)h
 5. 幺映射, id a = a
+
 ## morphism
 映射, 因为多用箭头表示, 也常叫做 'arrow'. 下文多用 [Haskell](https://www.haskell.org) 的语法表示.
 集合论中称作 'function', 线性代数中的 '线性变换, linear transformations', 群论(group theory) 中的 'group homomorphisms', 拓扑学(topology) 中的 'continuous functions'. 与这些术语在大的概念上一致, 在细节上却有很大不同.
