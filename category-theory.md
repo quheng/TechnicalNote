@@ -68,7 +68,9 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 ### 除环和域(field) 
 非零元素都可逆的环叫做除环, 交换的除环称为域
 
-## redo
+## 范畴 catagory
+1. 一系列对象(object)的集合
+2. 一系列箭头(arrow) 又叫做映射(morphism)
 
 ## morphism
 映射, 因为多用箭头表示, 也常叫做 'arrow'. 下文多用 [Haskell](https://www.haskell.org) 的语法表示.
