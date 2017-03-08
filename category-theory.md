@@ -74,6 +74,8 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 3. 与映射有关的域(domain)和陪域(codomain)
 4. 箭头是可以合成的, 即 f(gh) = (fg)h
 5. 幺映射, id a = a
+一些常用的代数结构作为 objects 可以形成 catagory
+![](/assets/111.png)
 
 ## Reference
 1. https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
