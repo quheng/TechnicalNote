@@ -86,6 +86,12 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 ### 满映射 epimorphism or epic
 对于箭头(Arrow) f : A -> B, 对于任意的箭头 g : B -> C, 与 箭头 h : B -> C, 若满足 g \* f = h \* f, 则 g = h, 那么称 f 为满映射
 
+## 初始对象 initial objects 
+若对象0, 对于每一个对象 A, 有且只有一个箭头从 0 到 A, 那么称对象 0 为初始对象. 常用 "!" 表示有且只有一个箭头.
+
+## 终止对象 terminal or final object
+对于元素1, 对于任意对象 A, 有且只有一个箭头从 A 到 1, 那么称对象 1为终止对象.
+
 
 
 ## Reference
