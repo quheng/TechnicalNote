@@ -78,7 +78,7 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 ![](/assets/111.png)
 
 ## morphism
-和群中的 morphism 
+和群中的 morphism 以及集合论中的 function 类似.
 
 ### monomorphism
 
