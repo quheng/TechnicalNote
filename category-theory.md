@@ -101,10 +101,10 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 2. $$\pi_2 : A * B \to B $$
 3. $$f : C \to A$$
 4. $$g : C \to B$$
+5. $$< f, g > : C \to A * B, where < f, g>(x) = (f(x), g(x))  $$
 
-
-
-
+得到下图
+![](/assets/2.png)
 ## Reference
 1. https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
 
