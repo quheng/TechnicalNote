@@ -97,7 +97,7 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 
 ## 乘积
 定义如下映射
-1. $$\pi_1 : A * B \to $$
+1. $$\pi_1 : A * B \to A $$
 
 ## Reference
 1. https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
