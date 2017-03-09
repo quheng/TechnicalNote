@@ -92,6 +92,8 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 ## 终止对象 terminal or final object
 对于元素1, 对于任意对象 A, 有且只有一个箭头从 A 到 1, 那么称对象 1为终止对象.
 
+## 全局元素或者常数, global element or constant
+由终止对象之间映射得到的元素叫做全局元素, 可用 f\*x 表示, f表示映射, x 表示终止变量.
 
 
 ## Reference
