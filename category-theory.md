@@ -105,6 +105,9 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 
 得到下图
 ![](/assets/2.png)
+
+这样乱搞的意义是, 在不破坏范畴对对象(object)黑盒的基础上, 用"箭头"建立了类似"元素", "乘积" 的概念.
+
 ## Reference
 1. https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
 
