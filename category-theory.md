@@ -77,6 +77,8 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 一些常用的代数结构作为 objects 可以形成 catagory
 ![](/assets/111.png)
 
+## morphism
+
 ## Reference
 1. https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
 
