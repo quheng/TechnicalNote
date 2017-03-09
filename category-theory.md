@@ -95,6 +95,9 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 ## 全局元素或者常数, global element or constant
 由终止对象之间映射得到的元素叫做全局元素, 可用 f\*x 表示, f表示映射, x 表示终止变量.
 
+## 乘积
+定义如下映射
+1. $$\pi_1 : A * B \arrow $$
 
 ## Reference
 1. https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
