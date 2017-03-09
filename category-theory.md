@@ -78,6 +78,8 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 ![](/assets/111.png)
 
 ## morphism
+和群中的 morphism 
+
 ### monomorphism
 
 
