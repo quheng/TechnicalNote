@@ -81,7 +81,7 @@ for (double i = 0; i < MAX_DOUBLE; ++i) {
 和群中的 morphism 以及集合论中的 function 类似.
 
 ### 单映射 monomorphism or monic 
-
+对于箭头(Arrow) f : B -> C, 对于任意的箭头 g : A -> B, 与 箭头 h : A -> B, 若满足 f \* g = f \* h, 则 g = h, 那么称 f 为单映射
 
 
 ## Reference
