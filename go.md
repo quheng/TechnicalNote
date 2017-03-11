@@ -55,4 +55,4 @@ T 只有定义在 T 上的方法, \*T 包含定义在 T 和 \*T 上的方法. �
 2. https://golang.org/doc/effective_go.html
 3. https://golang.org/doc/faq
 4. https://talks.golang.org/2012/concurrency.slide
-5. https://talks.golang.org/2013/advconc.slide#1
+5. https://talks.golang.org/2013/advconc.slide
