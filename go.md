@@ -50,6 +50,9 @@ https://golang.org/doc/faq#stack_or_heap
 ## T or *T
 T 只有定义在 T 上的方法, \*T 包含定义在 T 和 \*T 上的方法. 因为成员方法完全等价于通过一个 T or \*T 的参数传递进去. \*T 可以通过解析地址获取对应的值, 而 T 在值传递之后很难获取之前的地址. 这也导致了 T 定义的方法对 T 无法改变, 且效率低于 *T.
 
+## concurrency pattern
+
+
 ## reference
 1. https://blog.golang.org/go-slices-usage-and-internals
 2. https://golang.org/doc/effective_go.html
