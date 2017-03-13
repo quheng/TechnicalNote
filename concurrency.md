@@ -45,4 +45,4 @@ public class Singleton {
 此时正确性出现了问题. 原因在于`instance = new Singleton()`, 不是原子的, 虽然 synchronized 保证了互斥, 但是不保证代码块中的代码原子的执行. 考虑如下情况. 线程 A 执行到了第5行, 注意第 5 行不是原子的, new Instance 获得了内存地址并赋给了 instance 但没初始化. 此时线程 B 执行到了第 2 行(synchronized 外, 可以并发), 通过了判断, 获得了 instance, 但是 instance 指向的内存却是空的.
 
 此时需要声明 instance 为 volatile, volatile 保证保证内存可见性，防止指令重排序，并不保证操作原子性。 保证可见性意味着使用该变量必须重新去主内存读取，修改了该变量必须立刻刷新主内存。防止重排序意味着插入内存屏障.
-
+https://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133-faq.html#dcl
