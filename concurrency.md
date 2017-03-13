@@ -53,3 +53,6 @@ https://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133-faq.html#dcl
 ## 读写锁
 一个ReadWriteLock维护一对关联的锁，一个用于只读操作一个用于写。在没有写线程的情况下一个读锁可能会同时被多个读线程持有。写锁是独占的
 
+## 虚假唤醒
+todo
+
