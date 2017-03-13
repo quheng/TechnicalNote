@@ -46,3 +46,5 @@ public class Singleton {
 
 此时需要声明 instance 为 volatile, volatile 保证保证内存可见性，防止指令重排序，并不保证操作原子性。 保证可见性意味着使用该变量必须重新去主内存读取，修改了该变量必须立刻刷新主内存。防止重排序意味着插入内存屏障.
 https://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133-faq.html#dcl
+
+## 公平锁与非公平锁
