@@ -48,3 +48,5 @@ public class Singleton {
 https://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133-faq.html#dcl
 
 ## 公平锁与非公平锁
+公平体现在获取锁的顺序上, 公平锁意味着以请求锁的顺序获得锁, 非公平锁意味着随机获得锁.
+
