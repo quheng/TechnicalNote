@@ -18,4 +18,5 @@
 * [RegularExpress](regularexpress.md)
 * [category theory](category-theory.md)
 * [Go](go.md)
+* [concurrency](concurrency.md)
 
