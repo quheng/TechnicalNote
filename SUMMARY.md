@@ -19,4 +19,5 @@
 * [category theory](category-theory.md)
 * [Go](go.md)
 * [concurrency](concurrency.md)
+* [sicp](sicp.md)
 
