@@ -12,7 +12,6 @@ this representation is known as Church numerals, after its inventor, Alonzo Chur
 翻译成 js 是
 ```
 const zero = 
-  () => 
     (f) => 
       (x) => x
 
