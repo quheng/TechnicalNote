@@ -28,3 +28,4 @@ const addOne =
 
 (define f (lambda (x y . z) ⟨body⟩))
 (define g (lambda w ⟨body⟩))
+值得注意的是 `lambda` 的形式有一点不一样
