@@ -23,3 +23,8 @@ const addOne =
 ```
 
 ## dotted-tail
+(define (f x y . z) ⟨body⟩)
+(define (g . w) ⟨body⟩)
+
+(define f (lambda (x y . z) ⟨body⟩))
+(define g (lambda w ⟨body⟩))
