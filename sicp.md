@@ -29,3 +29,7 @@ const addOne =
 (define f (lambda (x y . z) ⟨body⟩))
 (define g (lambda w ⟨body⟩))
 值得注意的是 `lambda` 的形式有一点不一样
+
+## fold
+ex 2.38
+满足结合律左右折叠才一样
