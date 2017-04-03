@@ -33,3 +33,4 @@ const addOne =
 ## fold
 ex 2.38
 满足结合律左右折叠才一样
+
