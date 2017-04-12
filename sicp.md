@@ -40,7 +40,10 @@ const addOne =
 ### 消息传递 Message passing
 所需要的操作通过字符作为`消息`传入, 通过构建一个`智能操作结构`，智能体现在可以根据消息分配函数。`智能操作结构` 决定了函数分配表中的列.
 
+##
 
-
+### 引用透明
+p 315
+> A language that supports the concept that “equals can be substituted for equals” in an expression without changing the value of the expres- sion is said to be referentially transparent. 
 
 
