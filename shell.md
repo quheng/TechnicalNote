@@ -39,3 +39,5 @@ cat s6.txt | cut -f 2 -d '|' | jq '.logistics_address_search_response.addresses.
 1. -i 忽略大小写
 2. -v 输出未选中
 
+## ssh
+ssh-copy-id root@blabla  添加 key 到服务器
