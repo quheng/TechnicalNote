@@ -15,3 +15,6 @@ Host github_mada
 ```
 
 2.git clone git@github_mada:quheng/repo.git
+
+## gitignore
+https://www.gitignore.io/
