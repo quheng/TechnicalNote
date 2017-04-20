@@ -1,3 +1,6 @@
+## 进程和线程
+[proc fs and shared pids](http://lkml.iu.edu/hypermail/linux/kernel/9608/0191.html)
+
 ## double-checked locking
 不用获得锁便可以检测锁的条件, 用来减少第一次判断锁的条件的开销, 经常被用在单例模式中. 但是这是不安全的一种模式.
 
