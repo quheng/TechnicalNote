@@ -42,3 +42,5 @@ cat s6.txt | cut -f 2 -d '|' | jq '.logistics_address_search_response.addresses.
 ## ssh
 ssh-copy-id root@blabla  添加 key 到服务器
 
+## 编码转换
+iconv -f gbk -t utf-8 aaa.txt >bbb.txt
