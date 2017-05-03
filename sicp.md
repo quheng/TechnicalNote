@@ -102,7 +102,9 @@ y-combinator 用于解决匿名函数递归的问题
   )
 ))
 ```
-注意 fac 只是保存该 lambda 的一个调用方式，lambda 内部并没有使用 fac 这个名字，
+注意 fac 只是保存该 lambda 的一个调用方式，lambda 内部并没有使用 fac 这个名字，这个地方有点绕。
+
+
 
 
 
