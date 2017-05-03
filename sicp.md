@@ -108,7 +108,7 @@ y-combinator 用于解决匿名函数递归的问题
 
 现在，假设我们已经实现了匿名函数的递归，可以通过 (real_fac 10) 这样的方式来调用，我们可以改造一下之前完成的 fac
 ```
-(define fac 
+(define (fac x) 
 (lambda (x real_fac) 
   (if (= x 1) 
     1
@@ -116,6 +116,7 @@ y-combinator 用于解决匿名函数递归的问题
   )
 ))
 ```
+表面上看起来差别不大，而且用到了一个假想中的函数，但是注意，现在的 fac 已经变成了 real_fac。
 
 
 
