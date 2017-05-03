@@ -94,14 +94,15 @@ y-combinator 用于解决匿名函数递归的问题
 
 一个较为自然的想法是，把调用方法加在参数中，如下
 ```
+(define fac 
 (lambda (x self) 
   (if (= x 1) 
     1
     (* x (fac (- x 1) self))
   )
-)
+))
 ```
-
+注意 fac 只是保存该 lambda 的一个调用方式，lambda 内部并没有使用 fac 这个名字，
 
 
 
