@@ -119,7 +119,7 @@ y-combinator 用于解决匿名函数递归的问题
   )
 )
 ```
-表面上看起来差别不大，而且用到了一个假想中的函数，但是注意，现在的 fac 已经变成了 real_fac。这里发生了什么？ 使用一个 真\*递归函数可以将一个匿名函数变成它自己，抽象一下就是
+表面上看起来差别不大，而且用到了一个假想中的函数，但是注意，现在的 fac 已经变成了 real-fac。这里发生了什么？ 使用一个 真\*递归函数可以将一个匿名函数变成它自己，抽象一下就是
 ```
 (get_real f) = f
 ```
@@ -138,7 +138,24 @@ Y(F) = F(Y(F))
 ```
 所以现在的问题就是 如何构造这个 Y 函数的了，它就是 y-combinator
 
-最开始的时候，我们通过(fac 
+最开始的时候，我们通过(fac fac 10) 的方式得到了一个较丑陋的方式，但是确实最接近 real-fac 的尝试了，从这个思路入手，我们把 作为real-fac， 注意(fac fac)省略了参数n (柯理化)
+```
+(define generator
+  (lambda self (get_real (self self))
+)
+```
+
+这里基本上已得到了答案
+```
+(define Y
+   (lambda x
+     (let (generator (lambda self (x (self self))))
+     (generator generator)
+   ) 
+)
+```
+
+
 
 
 
