@@ -53,5 +53,5 @@ p 315
 等价于
 ((lambda (<var1>...<varn>)
   <body>
-)(<exp1>...<exp2>))
+) <exp1>...<exp2> )
 
