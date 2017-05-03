@@ -50,4 +50,8 @@ p 315
 (let ((<var1> <exp1>) ... (<varn><expn>))
   <body>
 )
+等价于
+((lambda (<var1>...<varn>)
+  <body>
+)(<exp1>...<exp2>))
 
