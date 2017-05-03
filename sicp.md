@@ -80,6 +80,8 @@ letrec创建的词法变量不仅可以在letrec执行体中可见而且在初�
 
 # y-combinator Ex 4.21
 y-combinator 用于解决匿名函数递归的问题
+参考[康托尔、哥德尔、图灵——永恒的金色对角线(rev#2)](http://mindhacks.cn/2006/10/15/cantor-godel-turing-an-eternal-golden-diagonal/)
+
 以阶乘函数举例
 ```
 (define (fac x)
