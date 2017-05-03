@@ -66,3 +66,9 @@ p 315
     )<expn>
   )
 )<exp1>)
+
+letrec创建的词法变量不仅可以在letrec执行体中可见而且在初始化中也可见。letrec是专门为局部的递归和互递归过程而设置的。
+(letrec
+    ((fact (lambda (n) (if (= n 1) 1 (* n (fact (- n 1)))))))
+    (fact 10)
+)
