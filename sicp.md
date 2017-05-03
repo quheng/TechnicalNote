@@ -74,4 +74,17 @@ letrec创建的词法变量不仅可以在letrec执行体中可见而且在初�
 )
 
 # y-combinator Ex 4.21
+y-combinator 用于解决匿名函数递归的问题
+
+
+
+
+
+
+
+
+
+
+
+
 
