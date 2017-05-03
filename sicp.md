@@ -149,12 +149,22 @@ Y(F) = F(Y(F))
 ```
 (define Y
    (lambda x
-     (let (generator (lambda self (x (self self))))
-     (generator generator)
+     (let ((generator (lambda self (x (self self)))))
+       (generator generator)
+     )
    ) 
 )
 ```
 
+测试一下
+```
+(define f
+  (lambda (self)
+    (lambda (n)
+      (if (zero? n)
+          1
+          (* n (self (- n 1)))))))
+```
 
 
 
