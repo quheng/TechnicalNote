@@ -59,5 +59,10 @@ p 315
   <body>
 )
 等价于
-((lambda (<var1>...<varn>) ()
-))
+((lambda (<var1>)
+  .... 
+  ((lambda (<varn>)
+      <body>
+    )<expn>
+  )
+)<exp1>)
