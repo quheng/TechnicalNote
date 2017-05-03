@@ -55,3 +55,8 @@ p 315
   <body>
 ) <exp1>...<exp2>)
 
+(let* ((<var1> <exp1>) ... (<varn><expn>))
+  <body>
+)
+等价于
+
