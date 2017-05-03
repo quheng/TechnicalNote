@@ -159,11 +159,11 @@ Y(F) = F(Y(F))
 测试一下
 ```
 (define f
-  (lambda (self)
+  (lambda (real_func)
     (lambda (n)
       (if (zero? n)
           1
-          (* n (self (- n 1)))))))
+          (* n (real_func (- n 1)))))))
 ```
 
 
