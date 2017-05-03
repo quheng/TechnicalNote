@@ -97,14 +97,14 @@ y-combinator 用于解决匿名函数递归的问题
 一个较为自然的想法是，把调用方法加在参数中，如下
 ```
 (define fac 
-(lambda (x self) 
+(lambda (self x) 
   (if (= x 1) 
     1
-    (* x (fac (- x 1) self))
+    (* x (fac self (- x 1)))
   )
 ))
 
-(fac 10 fac) ;Value: 3628800
+(fac fac 10) ;Value: 3628800
 ```
 虽然这样子使得 lambda 内部并没有使用 fac 这个名字，但是我们仍然需要在某个地方保存着 lambda 的调用方式，另外 (fac 10 fac) 这样的调用很不优雅。
 
@@ -138,7 +138,7 @@ Y(F) = F(Y(F))
 ```
 所以现在的问题就是 如何构造这个 Y 函数的了，它就是 y-combinator
 
-
+最开始的时候，我们通过(fac 
 
 
 
