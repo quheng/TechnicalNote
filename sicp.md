@@ -148,11 +148,12 @@ Y(F) = F(Y(F))
 这里基本上已得到了答案
 ```
 (define Y
-   (lambda x
-     (let ((generator (lambda self (x (self self)))))
-       (generator generator)
+   (lambda f
+        (let ((g (lambda (x) 
+               (f (lambda arg (apply (x x) arg))))))
+          (g g)
      )
-   ) 
+   )
 )
 ```
 
@@ -166,7 +167,10 @@ Y(F) = F(Y(F))
           (* n (real_func (- n 1)))))))
 ```
 
-
+写成 js 是：
+```
+const y = (f) => { const g = self => x =>  f(self(self))(x); return g(g); }
+```
 
 
 
