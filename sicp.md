@@ -46,4 +46,6 @@ const addOne =
 p 315
 > A language that supports the concept that “equals can be substituted for equals” in an expression without changing the value of the expres- sion is said to be referentially transparent. 
 
+# let let* letrec
+
 
