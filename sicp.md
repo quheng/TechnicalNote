@@ -72,3 +72,6 @@ letrec创建的词法变量不仅可以在letrec执行体中可见而且在初�
     ((fact (lambda (n) (if (= n 1) 1 (* n (fact (- n 1)))))))
     (fact 10)
 )
+
+# y-combinator Ex 4.21
+
