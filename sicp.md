@@ -101,12 +101,10 @@ y-combinator 用于解决匿名函数递归的问题
     (* x (fac (- x 1) self))
   )
 ))
+
+(fac 10 fac) ;Value: 3628800
 ```
-注意 fac 只是保存该 lambda 的一个调用方式，lambda 内部并没有使用 fac 这个名字，这个地方有点绕。
-
-
-
-
+虽然这样子使得 lambda 内部并没有使用 fac 这个名字，但是我们仍然需要在某个地方保存着 lambda 的调用方式，另外 (fac 10 fac) 这样的调用很不优雅，
 
 
 
