@@ -169,9 +169,13 @@ Y(F) = F(Y(F))
 
 写成 js 是：
 ```
-const y = (f) => { const g = self => x =>  f(self(self))(x); return g(g); }
+const y = f => { const g = self => x =>  f(self(self))(x); return g(g); }
 ```
 
+测试一下
+```
+y(real =>x=> (x == 0 ? 1 : x * real(x-1)))(10) // 3628800
+```
 
 
 
