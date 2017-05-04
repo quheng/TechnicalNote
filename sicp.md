@@ -188,9 +188,12 @@ f(self(self))
 ```
 区别如下：
 ```
+const show = () => {console.log('!!!')}
+const f = (x) => {x(); return (y) => (y())}
 
+const g = (x) => f(show)(x) // nothing
+const h = f(show) // !!!
 ```
-
 
 # normal order and applicative order
 4.2.1
