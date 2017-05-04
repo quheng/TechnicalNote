@@ -188,6 +188,12 @@ lazy 和 normal-order 之间的差别有一点点微妙。一般而言，lazy �
 接下来又讲了 strict 和 non-strict 分别对应 non-lazy 和 lazy。
 在纯的 applicative order 语言中所有的参数都是 strict。在纯的 normal-order 语言中，可能是 strict 或者 non-strict 的，或者由使用者自定义。
 
+假设我们定义 unless
+```
+(define (unless condition process else-process)
+  (if condition else-process process)
+)
+```
+看起来了很好，但是在 applicative-Oder 有下面的问题
 
- 
 
