@@ -212,3 +212,9 @@ lazy 和 normal-order 之间的差别有一点点微妙。一般而言，lazy �
 )
 ```
 会发生一直递归下去，因为即使(= n 1) 也会 执行 (* n (factorial (- n 1)))，从而一直执行下去。
+
+lazy 的一个问题是何时求值，sicp 中的做法是primitive function 或者  if(condition)，这个规范定义好就行。
+
+
+
+
