@@ -194,7 +194,7 @@ lazy 和 normal-order 之间的差别有一点点微妙。一般而言，lazy �
   (if condition else-process process)
 )
 ```
-看起来了很好，但是在 applicative-Oder 有下面的问题
+看起来了很好，但是在 applicative-order 有下面的问题
 ```
 (unless (= b 0)
   (/ a b)
