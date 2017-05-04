@@ -185,7 +185,7 @@ y(real =>x=> (x == 0 ? 1 : x * real(x-1)))(10) // 3628800
 4.2.1
 lazy 和 normal-order 之间的差别有一点点微妙。一般而言，lazy 指的是一种求值的机制，而 normal-order 指的是一种语言的语义，和求值的方式无关。但是这不是一个固定的区别，这两个术语经常互用。
 
-
+接下来又讲了 strict 和 non-strict 分别对应 non-lazy 和 lazy。
 
 
  
