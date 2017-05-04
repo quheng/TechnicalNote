@@ -186,7 +186,8 @@ y(real =>x=> (x == 0 ? 1 : x * real(x-1)))(10) // 3628800
 lazy 和 normal-order 之间的差别有一点点微妙。一般而言，lazy 指的是一种求值的机制，而 normal-order 指的是一种语言的语义，和求值的方式无关。但是这不是一个固定的区别，这两个术语经常互用。
 
 接下来又讲了 strict 和 non-strict 分别对应 non-lazy 和 lazy。
-在纯的 applicative order 语言中所有的参数都是 strict。在纯的 normal-order 语言中
+在纯的 applicative order 语言中所有的参数都是 strict。在纯的 normal-order 语言中，可能是 strict 或者 non-strict 的，或者由使用者自定义。
+
 
  
 
