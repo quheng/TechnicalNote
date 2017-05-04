@@ -213,6 +213,12 @@ lazy 和 normal-order 之间的差别有一点点微妙。一般而言，lazy �
 ```
 会发生一直递归下去，因为即使(= n 1) 也会 执行 (* n (factorial (- n 1)))，从而一直执行下去。
 
+在 lazy 的定义下，可以这样定义
+```
+(define ones (cons 1 ones))
+```
+奇怪的是 scheme 里不是无限递归，可能和 scheme 的实现有关吧。 
+
 lazy 的一个问题是何时求值，sicp 中的做法是primitive function 或者  if(condition)，这个规范定义好就行。
 
 
