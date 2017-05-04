@@ -195,5 +195,13 @@ lazy 和 normal-order 之间的差别有一点点微妙。一般而言，lazy �
 )
 ```
 看起来了很好，但是在 applicative-Oder 有下面的问题
+```
+(unless (= b 0)
+  (/ a b)
+  0
+)
+```
+其中 (/ a b) 是求值之后传给 if 的，会产生异常。
+
 
 
