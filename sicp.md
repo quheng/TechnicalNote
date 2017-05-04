@@ -177,6 +177,7 @@ const y = f => { const g = self => x =>  f(self(self))(x); return g(g); }
 y(real =>x=> (x == 0 ? 1 : x * real(x-1)))(10) // 3628800
 ```
 
+注意，这里的用 js 实现的确切叫 z-combinator，即在 applicative order 中的实现，见下面一节。
 
 
 
