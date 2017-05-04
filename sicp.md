@@ -217,7 +217,7 @@ lazy 和 normal-order 之间的差别有一点点微妙。一般而言，lazy �
 ```
 (define ones (cons 1 ones))
 ```
-奇怪的是 scheme 里不是无限递归，可能和 scheme 的实现有关吧。 
+奇怪的是 scheme 里不是无限递归，可能和 scheme 的实现有关吧。 js 这样的表达式确实的无限递归的。
 
 lazy 的一个问题是何时求值，sicp 中的做法是primitive function 或者  if(condition)，这个规范定义好就行。
 
