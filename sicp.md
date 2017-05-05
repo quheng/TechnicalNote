@@ -194,6 +194,11 @@ const f = (x) => {x(); return (y) => (y())}
 const g = (x) => f(show)(x) // nothing
 const h = f(show) // !!!
 ```
+表面上看起来是仍是需要定义变量名的, 但你可以写成这样了
+```
+(self => x => f(self(self))(x))((self => x => f(self(self))(x)))
+```
+把 f 替换成你想要的函数即可。（js 由于没有惰性求值，很容易得到一个死递归，需要注意）
 
 # normal order and applicative order
 4.2.1
