@@ -6,7 +6,8 @@ P123
 
 ## Church numerals
 P126
-> (define zero (lambda (f) (lambda (x) x))) (define (add-1 n)(lambda (f) (lambda (x) (f ((n f) x)))))
+> (define zero (lambda (f) (lambda (x) x))) (define (add-1 n)
+(lambda (f) (lambda (x) (f ((n f) x)))))
 this representation is known as Church numerals, after its inventor, Alonzo Church, the logician who invented the λ- calculus.
 
 翻译成 js 是
@@ -22,14 +23,6 @@ const addOne =
         f(n(f)(x))
 ```
 
-## dotted-tail
-(define (f x y . z) ⟨body⟩)
-(define (g . w) ⟨body⟩)
-
-(define f (lambda (x y . z) ⟨body⟩))
-(define g (lambda w ⟨body⟩))
-值得注意的是 `lambda` 的形式有一点不一样
-
 ## 2.4 数据表示
 ### Tagged data 代标志的数据
 给每一种数据带上标志，调用函数的时候通过标志来确定调用什么样的方法。缺点是函数需要知道所有的标志，添加新的标志需要修改所有的函数。编写新的数据类型的时候要注意不能重名。
@@ -40,43 +33,9 @@ const addOne =
 ### 消息传递 Message passing
 所需要的操作通过字符作为`消息`传入, 通过构建一个`智能操作结构`，智能体现在可以根据消息分配函数。`智能操作结构` 决定了函数分配表中的列.
 
-## 模块化、对象和状态
-
 ### 引用透明
 p 315
 > A language that supports the concept that “equals can be substituted for equals” in an expression without changing the value of the expres- sion is said to be referentially transparent. 
-
-# let let* letrec
-```
-(let ((<var1> <exp1>) ... (<varn><expn>))
-  <body>
-)
-```
-等价于
-((lambda (<var1>...<varn>)
-  <body>
-) <exp1>...<exp2>)
-
-(let* ((<var1> <exp1>) ... (<varn><expn>))
-  <body>
-)
-等价于
-```
-((lambda (<var1>)
-  .... 
-  ((lambda (<varn>)
-      <body>
-    )<expn>
-  )
-)<exp1>)
-```
-letrec创建的词法变量不仅可以在letrec执行体中可见而且在初始化中也可见。letrec是专门为局部的递归和互递归过程而设置的。 ex 4.20
-```
-(letrec
-    ((fact (lambda (n) (if (= n 1) 1 (* n (fact (- n 1)))))))
-    (fact 10)
-)
-```
 
 # y-combinator Ex 4.21
 y-combinator 用于解决匿名函数递归的问题

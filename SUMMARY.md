@@ -6,7 +6,6 @@
 * [Hive](hive.md)
 * [Docker](docker.md)
 * [Vim](vim.md)
-* [presto](presti.md)
 * [Haskell](haskell.md)
 * [Shell](shell.md)
 * [aria2](aria.md)
@@ -18,6 +17,7 @@
 * [RegularExpress](regularexpress.md)
 * [category theory](category-theory.md)
 * [Go](go.md)
-* [concurrency](concurrency.md)
-* [sicp](sicp.md)
+* [Concurrency](concurrency.md)
+* [Sicp](sicp.md)
+* [Scheme](scheme.md)
 
