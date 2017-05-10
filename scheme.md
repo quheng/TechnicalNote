@@ -13,6 +13,12 @@
 ```
 (quote (a b c d)) => (a b c d)
 ```
+```
+(quote (quote cons)) => (quote cons)
+(car (quote (quote cons))) => quote
+```
+在这个例子中, 第二个 `quote` 并不起任何作用, 和任何的 symbol 相同, 因为外层的 `quote` 并不会执行后面的代码.
+
 相应的`(list (a b c d))` 在 a,b,c,d 未定义的情况下会报错
 
 
