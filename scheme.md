@@ -17,6 +17,10 @@
 
 `quote` 的作用是将代码视作一种程序，便于操作语法树。
 
+# list
+若 `(cdr a)` 得到的是一个 `list` 那么 `a` 被称作 * proper list*, 空 list `()` 
+
+
 # let let* letrec
 ```
 (let ((<var1> <exp1>) ... (<varn><expn>))
