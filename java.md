@@ -74,3 +74,10 @@ which one is better?
 ## filter
 
 如果有值并且满足断言条件返回包含该值的Optional，否则返回空Optional。
+
+
+
+## tips
+1. char 默认使用unicode
+2. main 要在没有任何对象的情况下调用  因此要static
+

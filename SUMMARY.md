@@ -1,23 +1,30 @@
 # Summary
 
+## Introduction
+
 * [Introduction](README.md)
+
+## Programing Language
+* [Haskell](haskell.md)
+* [Java](java.md)
+* [JavaScript](javascript.md)
+* [Go](go.md)
+* [Scheme](scheme.md)
+* [RegularExpress](regularexpress.md)
+
+## Tools
 * [Git](git.md)
 * [DynamoDB](dynamodb.md)
 * [Hive](hive.md)
 * [Docker](docker.md)
 * [Vim](vim.md)
-* [Haskell](haskell.md)
 * [Shell](shell.md)
 * [aria2](aria.md)
-* [NullableObject](nullableobject.md)
 * [Guava](guava.md)
 * [ngrok](ngrok.md)
-* [Java](java.md)
-* [JavaScript](javascript.md)
-* [RegularExpress](regularexpress.md)
-* [category theory](category-theory.md)
-* [Go](go.md)
+
+## Notes
+* [CategoryTheory](category-theory.md)
 * [Concurrency](concurrency.md)
 * [Sicp](sicp.md)
-* [Scheme](scheme.md)
 
