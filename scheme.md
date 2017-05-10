@@ -1,11 +1,21 @@
 # quote
 `quote` 并不是函数调用，它是一种特殊的语法。
+
+对于数字和字符串，在任何情况下都是常量，`quote` 不起任何作用
 ```
 '2 => 2
 '2/3 => 2/3
 
 (quote "Hi Mom!") => "Hi Mom!"
 ```
+
+对于 list，得到相应符号的 list
+```
+(quote (a b c d)) => (a b c d)
+```
+
+相应的`(list (a b c d))` 在 a,b,c,d 未定义的情况下会报错
+
 
 
 # let let* letrec
