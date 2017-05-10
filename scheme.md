@@ -13,10 +13,9 @@
 ```
 (quote (a b c d)) => (a b c d)
 ```
-
 相应的`(list (a b c d))` 在 a,b,c,d 未定义的情况下会报错
 
-
+`quote` 的作用是将代码视作一种程序，便于操作语法树。
 
 # let let* letrec
 ```
