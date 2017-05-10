@@ -31,6 +31,19 @@
 '(a . (b . (c . ()))) => (a b c)
 ```
 
+## car cdr
+`car` Contents of the Address part of Register number 取列表中的第一个
+
+`cdr` Contents of the Decrement part of Register number 取列表中的剩下的
+
+注意, a, d 可以组合使用, 组合方式先右后左
+```
+(caar (list (list 1 2 3) 4 5 6)) => 1
+(cddr (list (list 1 2 3) 4 5 6)) => (5, 6)
+(cadr (list (list 1 2 3) 4 5 6)) => 4 ;; 先 d 后 a
+(cdar (list (list 1 2 3) 4 5 6)) => (2 3) ;; 先 a 后 d
+```
+  
 
 # let let* letrec
 ```
