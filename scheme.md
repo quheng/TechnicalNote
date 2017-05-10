@@ -1,5 +1,5 @@
 # quote
-
+`quote` 并不是函数调用，它是一种特殊的语法。
 
 # let let* letrec
 ```
