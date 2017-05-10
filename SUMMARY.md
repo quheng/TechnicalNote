@@ -19,9 +19,9 @@
 * [Docker](docker.md)
 * [Vim](vim.md)
 * [Shell](shell.md)
-* [aria2](aria.md)
+* [Aria2](aria.md)
 * [Guava](guava.md)
-* [ngrok](ngrok.md)
+* [Ngrok](ngrok.md)
 
 ## Notes
 * [CategoryTheory](category-theory.md)
