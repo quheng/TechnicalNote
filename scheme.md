@@ -1,6 +1,10 @@
 # quote
 `quote` 并不是函数调用，它是一种特殊的语法。
-
+```
+'2 => 2
+'2/3 => 2/3
+(quote "Hi Mom!") => "Hi Mom!"
+```
 # let let* letrec
 ```
 (let ((<var1> <exp1>) ... (<varn><expn>))
