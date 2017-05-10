@@ -1,5 +1,5 @@
 # quote
-`quote` 并不是函数调用，它是一种特殊的语法。
+`quote` 并不是函数调用，它是一种特殊的语法。`quote` 的作用是将代码视作一种程序，便于操作语法树。
 
 对于数字和字符串，在任何情况下都是常量，`quote` 不起任何作用
 ```
@@ -15,7 +15,6 @@
 ```
 相应的`(list (a b c d))` 在 a,b,c,d 未定义的情况下会报错
 
-`quote` 的作用是将代码视作一种程序，便于操作语法树。
 
 # list
 若 `(cdr a)` 得到的是一个 `list` 那么 `a` 被称作 * proper list*, 空 list `()` 也是 * proper list * 虽然 `(cdr '())` 会报错. 反正被称作 * improper list *,例如 `(cons 'a 'b)` 就是一个 * improper list *, 用点号标记(dotted-pair notation) `(a . b)`, `(cdr '(a . b)) => b`
