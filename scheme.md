@@ -53,7 +53,7 @@
 有三种形式：
 1. 单个元素： `var`
 2. * proper list * `(var1 ... varn)`
-3. 
+3. * improper list * `(var1 ... varn . varr)`
 
 # let let* letrec
 *一些*解释器支持方括号提供可读性 `(let ([f +]) (f 2 3)) => 5`
