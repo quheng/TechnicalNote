@@ -32,7 +32,9 @@
 ```
 
 # procedure
-参数的处理顺序是不确定的。
+参数的处理顺序是不确定的，甚至对解释器对于不同的应用有不同的顺序。
+
+
 
 ## car cdr
 `car` Contents of the Address part of Register number 取列表中的第一个
