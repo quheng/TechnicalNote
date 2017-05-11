@@ -56,8 +56,9 @@
 ## shadow
 ```
 (let ([x 1])  
-  (let ([x (+ x 1)])(+ x x))) 4
+  (let ([x (+ x 1)])(+ x x))) => 4
 ```
+`let` 第一个参数不属于 `body` 不会被覆盖掉（shadow），第二个参数会被覆盖掉。
 
 ```
 (let ((<var1> <exp1>) ... (<varn><expn>))
