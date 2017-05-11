@@ -31,6 +31,9 @@
 '(a . (b . (c . ()))) => (a b c)
 ```
 
+# procedure
+参数的处理顺序是不确定的。
+
 ## car cdr
 `car` Contents of the Address part of Register number 取列表中的第一个
 
