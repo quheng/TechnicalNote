@@ -65,8 +65,7 @@
 第三种为前两种的复合，前面给定数量，后面放进 `list`，若前面的数量就不足，则报错。
 ```
 (let ([g (lambda (x . y) (list x y))]) (g 1 2 3 4)) => (1 (2 3 4))
-
-
+(let ([g (lambda (x y z. w) (list x y z w))]) (g 1 2 )) => error g: arity mismatch;
 ```
 
 # let let* letrec
