@@ -51,7 +51,7 @@
 
 # let let* letrec
 ## tips
-1. 可以使用方括号 `(let ([f +]) (f 2 3)) => 5`
+1. *一些*解释器支持方括号提供可读性 `(let ([f +]) (f 2 3)) => 5`
 ```
 (let ((<var1> <exp1>) ... (<varn><expn>))
   <body>
