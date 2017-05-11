@@ -55,6 +55,13 @@
 2. * proper list * `(var1 ... varn)`
 3. * improper list * `(var1 ... varn . varr)`
 
+第一种可以个任意个参数，会被会被放到一个 `list` 中，如：
+```
+(let ([f (lambda x x)]) (f 1 2 3 4)) => (1 2 3 4)
+```
+
+
+
 # let let* letrec
 *一些*解释器支持方括号提供可读性 `(let ([f +]) (f 2 3)) => 5`
 对于不支持的解释器，请将方括号替换为圆括号。
