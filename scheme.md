@@ -31,12 +31,6 @@
 '(a . (b . (c . ()))) => (a b c)
 ```
 
-# procedure
-1. 参数的处理顺序是不确定的，甚至对解释器对于不同的应用有不同的顺序。
-2. procedure 也会被求值: `((car (list + -)) 1 2)`
-
-
-
 ## car cdr
 `car` Contents of the Address part of Register number 取列表中的第一个
 
@@ -49,9 +43,15 @@
 (cadr '(( 1 2 3) 4 5 6)) => 4 ;; 先 d 后 a
 (cdar '(( 1 2 3) 4 5 6)) => (2 3) ;; 先 a 后 d
 ```
-  
+
+# procedure
+1. 参数的处理顺序是不确定的，甚至对解释器对于不同的应用有不同的顺序。
+2. procedure 也会被求值: `((car (list + -)) 1 2)`
+ 
 
 # let let* letrec
+## tips
+1. 可以使用方括号 `(let ([f +]) (f 2 3)) => 5`
 ```
 (let ((<var1> <exp1>) ... (<varn><expn>))
   <body>
