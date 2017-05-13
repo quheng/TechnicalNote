@@ -23,20 +23,20 @@ note: `*` 意思是 0 次以上， `datum` 是 scheme object
 
 对于数字和字符串，在任何情况下都是常量，`quote` 不起任何作用
 ```
-'2 => 2
+'2 ;;=> 2
 
-'2/3 => 2/3
+'2/3 ;;=> 2/3
 
-(quote "Hi Mom!") => "Hi Mom!"
+(quote "Hi Mom!") ;;=> "Hi Mom!"
 ```
 
 对于 list，得到相应符号的 list
 ```
-(quote (a b c d)) => (a b c d)
+(quote (a b c d)) ;;=> (a b c d)
 ```
 ```
-(quote (quote cons)) => (quote cons)
-(car (quote (quote cons))) => quote
+(quote (quote cons)) ;;=> (quote cons)
+(car (quote (quote cons))) ;;=> quote
 ```
 在这个例子中, 第二个 `quote` 并不起任何作用, 和任何的 symbol 相同, 因为外层的 `quote` 并不会执行后面的代码.
 
@@ -49,14 +49,14 @@ note: `*` 意思是 0 次以上， `datum` 是 scheme object
 两个元素的 *list* 被称作 *pair*
 
 ```
-(pair?  '(a . b)) => #t
-(pair?  '(a b)) => #f
+(pair?  '(a . b)) ;;=> #t
+(pair?  '(a b)) ;;=> #f
 ```
 
 注意, 点号标记在后一个元素是 `list` 的时候会自动取消,例如
 
 ```
-'(a . (b . (c . ()))) => (a b c)
+'(a . (b . (c . ()))) ;;=> (a b c)
 ```
 
 ## car cdr
@@ -66,10 +66,10 @@ note: `*` 意思是 0 次以上， `datum` 是 scheme object
 
 注意, a, d 可以组合使用, 组合方式先右后左
 ```
-(caar '(( 1 2 3) 4 5 6)) => 1
-(cddr '(( 1 2 3) 4 5 6)) => (5, 6)
-(cadr '(( 1 2 3) 4 5 6)) => 4 ;; 先 d 后 a
-(cdar '(( 1 2 3) 4 5 6)) => (2 3) ;; 先 a 后 d
+(caar '(( 1 2 3) 4 5 6)) ;;=> 1
+(cddr '(( 1 2 3) 4 5 6)) ;;=> (5, 6)
+(cadr '(( 1 2 3) 4 5 6)) ;;=> 4 ;; 先 d 后 a
+(cdar '(( 1 2 3) 4 5 6)) ;;=> (2 3) ;; 先 a 后 d
 ```
 
 # procedure
@@ -85,19 +85,19 @@ note: `*` 意思是 0 次以上， `datum` 是 scheme object
 
 第一种可以个任意个参数，会被会被放到一个 `list` 中，如：
 ```
-(let ([f (lambda x x)]) (f 1 2 3 4)) => (1 2 3 4)
+(let ([f (lambda x x)]) (f 1 2 3 4)) ;;=> (1 2 3 4)
 ```
 
 第二种给定参数数量
 
 第三种为前两种的复合，前面给定数量，后面放进 `list`，若前面的数量就不足，则报错。
 ```
-(let ([g (lambda (x . y) (list x y))]) (g 1 2 3 4)) => (1 (2 3 4))
-(let ([g (lambda (x y z. w) (list x y z w))]) (g 1 2 )) => error g: arity mismatch;
+(let ([g (lambda (x . y) (list x y))]) (g 1 2 3 4)) ;;=> (1 (2 3 4))
+(let ([g (lambda (x y z. w) (list x y z w))]) (g 1 2 )) ;;=> error g: arity mismatch;
 ```
 
 # let let* letrec
-*一些*解释器支持方括号提供可读性 `(let ([f +]) (f 2 3)) => 5`
+*一些*解释器支持方括号提供可读性 `(let ([f +]) (f 2 3)) ;;=> 5`
 对于不支持的解释器，请将方括号替换为圆括号。
 
 ## shadow
@@ -105,7 +105,7 @@ note: `*` 意思是 0 次以上， `datum` 是 scheme object
 (let ([x 1])
   
   (let ([x (+ x 1)])
-(+ x x))) => 4
+(+ x x))) ;;=> 4
 ```
 `let` 第一个参数不属于 `body` 不会被覆盖掉（shadow），第二个参数会被覆盖掉。
 
@@ -152,6 +152,16 @@ letrec 创建的词法变量不仅可以在letrec执行体中可见而且在初�
 )
 ```
 
+named let
+```
+(let name ((var expr) ...) body1 body2 ...)
+```
+
+等价于
+```
+(letrec ((name (lambda (var ...) body1 body2 ...))) (name expr ...))
+```
+
 # define
 针对 lambda 的三种形式，define 也有三种形式
 1. `(define var0 (lambda var e1 e2 ...))` 等价于 `(define (var0 . varr) e1 e2 ...)`
@@ -169,5 +179,82 @@ letrec 创建的词法变量不仅可以在letrec执行体中可见而且在初�
 ```
 会先求`(/ 1 n)` 的值, 这在 `n = 0` 的时候会出错. 因此, 需要将 `if`  变成一个关键字, 惰性求值. 对于 `or` `and` 等需要短路的语义类似, 也需要特殊处理.
 
+# Continuations
+ "what to do with the value" 
+在计算的时候（不考虑并行），代码是顺序执行的，这就是说，每一句程序都有 *接下来* 的程序要运行，例如
+`(if (null? x) (quote ()) (cdr x))` 在 `x` 是 `(a b c)` 的执行过程如下：
 
+```
+1. the value of (if (null? x) (quote ()) (cdr x)), 2. the value of (null? x),
+3. the value of null?,
+4. the value of x,
+5. the value of cdr,
+6. the value of x (again).
+```
+
+每一行程序之后的程序就是 *Continuations* 
+continuation 是当前环境的一个打包, 记录了这个程序此时的所有状态, 以及接下来要运行什么。
+Scheme 中 continuation 是 first-class的， 这意味着它可以被当做参数和返回值，也可以通过调用 continuation 执行后续程序。
+
+## call/cc
+call/cc 全称是 call-with-current-continuation，用于获取 `Continuation`
+
+它接受一个参数 `receiver`, `receiver` 也是一个函数，它接受一个 `continuation` 参数,
+```
+(call/cc (lambda (continuation) (;; do with continuation)))
+```
+`continuation`, 便是调用 `call/cc` 处接下来要运行的程序。
+
+例子：
+```
+(define (receiver continuation) (
+  (continuation "magic")
+))
+
+(display (call/cc receiver)) ;; magic
+```
+
+例子中的 `continuation` 代表了接下来要运行的 `display`, 并将 "magic" 传进去。
+
+更多的例子
+```
+(call/cc
+  (lambda (k)
+    (* 5 4))) ;;=> 20, 没有用 k， 简单返回了 20
+
+(call/cc
+  (lambda (k)
+    (* 5 (k 4)))) ;;=>4， 将 4 传给了 'continuation' (REPL 的输出)， 故输出 4
+
+(+ 2 (call/cc
+  (lambda (k)
+    (* 5 (k 4))))) ;;=> 6, 将 4 传给了 'continuation' ('(+ 2 blabla )'), 故输出 6
+
+;; non-local exit 
+(define product
+  (lambda (ls)
+    (call/cc
+      (lambda (break)
+        (let f ([ls ls])
+          (cond
+            [(null? ls) 1]
+            [(= (car ls) 0) (break 0)]
+            [else (* (car ls) (f (cdr ls)))]))))))
+(product '(1 2 3 4 5))  ;;=> 120  在 receiver 中完成运算
+(product '(7 3 8 0 1 9 5)) ;;=> 0 在 遇到 0 时直接跳到 'continuation' （REPL 的输出） 节省了函数返回的计算
+```
+
+一个复杂的例子：
+```
+(let ([x (call/cc (lambda (k) (k (lambda (first) (first 3)))))]) 
+  (x (lambda (second) (+ second 2))))
+```
+
+`call/cc` 获取的 'continuation' 是 `(let ([x blabla]) (x (lambda (second) (+ second 2))))` 把 `(lambda (first) (first 3))` 作为返回给 `continuation` 得到 
+
+```
+(let ([x (lambda (first) (first 3))]) 
+  (x (lambda (second) (+ second 2))))
+```
+因此计算结果是 `5`
 
