@@ -132,7 +132,19 @@ note: `*` 意思是 0 次以上， `datum` 是 scheme object
   )
 )<exp1>)
 ```
-letrec创建的词法变量不仅可以在letrec执行体中可见而且在初始化中也可见。letrec是专门为局部的递归和互递归过程而设置的。 ex 4.20
+使用 `define-syntax` 定义如下：
+
+```
+(define-syntax mylet
+  (syntax-rules ()
+    [(_ () b1 b2 ...) ((lambda () b1 b2 ...))]
+    [(_ ((x e)) b1 b2 ...)
+     ((lambda (x) b1 b2 ...) e)]
+    [(_ ((x e) (x1 e1) ... ) b1 b2 ...)
+     ((lambda (x) (mylet ((x1 e1) ...) b1 b2 ...)) e)]))
+```
+
+letrec 创建的词法变量不仅可以在letrec执行体中可见而且在初始化中也可见。letrec是专门为局部的递归和互递归过程而设置的。 ex 4.20
 ```
 (letrec
     ((fact (lambda (n) (if (= n 1) 1 (* n (fact (- n 1)))))))
