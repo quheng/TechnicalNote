@@ -258,3 +258,26 @@ call/cc 全称是 call-with-current-continuation，用于获取 `Continuation`
 ```
 因此计算结果是 `5`
 
+我们还可以把 'continuation' 保存下来
+
+```
+(define cc #f)
+(+ (call/cc (lambda (return)
+                (set! cc return)
+                1))
+   1)  ;; => 2
+(cc 1) ;; => 2
+(cc 10) ;; => 11
+```
+
+这可以用来做
+1. 断点跟踪，观察当前变量并可以继续执行
+2. 多任务(multi-tasking) 的任务切换
+3. 协程(coroutine)
+
+和数理逻辑的关系还有待学习啦，引一段知乎的回答：
+> Curry-Howard 同构的层面，call/cc 对应皮尔士定律，它代表着排中律，这条定律是 Lambda 演算所对应的直觉逻辑里没有的
+> 作者：Belleve
+> 链接：https://www.zhihu.com/question/21954238/answer/23855834
+> 来源：知乎
+> 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
