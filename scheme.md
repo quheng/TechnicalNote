@@ -1,3 +1,23 @@
+# core language
+```
+<program>             -->   <form>*
+<form>                -->   <definition> | <expression>
+<definition>          -->   <variable definition> | (begin <definition>*)
+<variable definition> -->   (define <variable> <expression>) 
+<expression>          -->   <constant>
+                        | <variable>
+                        | (quote<datum>)
+                        | (lambda <formals> <expression> <expression>*)
+                        | (if <expression> <expression> <expression>)
+                        | (set! <variable> <expression>)
+                        | <application>
+<constant>            -->  <boolean> | <number> | <character> | <string> <formals>             -->  <variable>
+                        | <variable*>
+                        | (<variable> <variable>*. <variable>)
+<application>         --> (<expression><expression>*)
+```
+note: `*` 意思是 0 次以上， `datum` 是 scheme object 
+
 # quote
 `quote` 并不是函数调用，它是一种特殊的语法。`quote` 的作用是将代码视作一种程序，便于操作语法树。
 
