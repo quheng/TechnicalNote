@@ -161,6 +161,8 @@ named let
 ```
 (letrec ((name (lambda (var ...) body1 body2 ...))) (name expr ...))
 ```
+
+## tips
 有循环引用的时候需要使用 `-rec`，需要按顺序求值的时候使用 `-*`
 
 
