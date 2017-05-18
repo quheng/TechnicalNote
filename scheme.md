@@ -209,6 +209,8 @@ call/cc 全称是 call-with-current-continuation，用于获取 `Continuation`
 ```
 `continuation`, 便是调用 `call/cc` 处接下来要运行的程序。
 
+If procedure returns normally when passed the continuation procedure, the values returned by call/cc are the values returned by procedure.
+
 例子：
 ```
 (define (receiver continuation) (
