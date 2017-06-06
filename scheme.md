@@ -252,7 +252,8 @@ If procedure returns normally when passed the continuation procedure, the values
 
 一个复杂的例子：
 ```
-(let ([x (call/cc (lambda (k) (k (lambda (first) (first 3)))))]) 
+(let (
+  [x (call/cc (lambda (k) (k (lambda (first) (first 3)))))]) 
   (x (lambda (second) (+ second 2))))
 ```
 
