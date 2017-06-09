@@ -21,7 +21,7 @@ note: `*` 意思是 0 次以上， `datum` 是 scheme object
 # quote
 `quote` 并不是函数调用，它是一种特殊的语法。`quote` 的作用是将代码视作一种程序，便于操作语法树。
 
-对于数字和字符串，在任何情况下都是常量，`quote` 不起任何作用
+对于数字和字符串，在任何情况下都是常量，`quote` 不起任何作用(self-evaluating constants, i.e., numbers, booleans, characters, strings, and bytevectors)
 ```
 '2 ;;=> 2
 
