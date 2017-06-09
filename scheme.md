@@ -42,6 +42,15 @@ note: `*` 意思是 0 次以上， `datum` 是 scheme object
 
 相应的`(list (a b c d))` 在 a,b,c,d 未定义的情况下会报错
 
+## quasiquote 与 unquote (quasi- 类似的)
+quasiquote 会将 unquote 求值， quasiquote 缩写为 `\``, unquote 缩写为 `,`
+
+```
+`(+ 2 ,(* 3 4));; =>  (+ 2 12)
+'(+ 2 ,(* 3 4));; => (+ 2 (unquote (* 3 4)))
+'(+ 2 `(* 3 4));; => (+ 2 (quasiquote (* 3 4)))
+```
+
 
 # list
 若 `(cdr a)` 得到的是一个 `list` 那么 `a` 被称作 *proper list*, 空 list `()` 也是 * proper list * 虽然 `(cdr '())` 会报错. 反之被称作 *improper list*, 例如 `(cons 'a 'b)` 就是一个 *improper list*, 用点号标记(dotted-pair notation) `(a . b)`, `(cdr '(a . b)) => b`
