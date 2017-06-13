@@ -18,39 +18,6 @@
 ```
 note: `*` 意思是 0 次以上， `datum` 是 scheme object 
 
-# quote
-`quote` 并不是函数调用，它是一种特殊的语法。`quote` 的作用是将代码视作一种程序，便于操作语法树。
-
-对于数字和字符串，在任何情况下都是常量，`quote` 不起任何作用(self-evaluating constants, i.e., numbers, booleans, characters, strings, and bytevectors)
-```
-'2 ;;=> 2
-
-'2/3 ;;=> 2/3
-
-(quote "Hi Mom!") ;;=> "Hi Mom!"
-```
-
-对于 list，得到相应符号的 list
-```
-(quote (a b c d)) ;;=> (a b c d)
-```
-```
-(quote (quote cons)) ;;=> (quote cons)
-(car (quote (quote cons))) ;;=> quote
-```
-在这个例子中, 第二个 `quote` 并不起任何作用, 和任何的 symbol 相同, 因为外层的 `quote` 并不会执行后面的代码.
-
-相应的`(list (a b c d))` 在 a,b,c,d 未定义的情况下会报错
-
-## quasiquote 与 unquote (quasi- 类似的)
-quasiquote 会将 unquote 求值， quasiquote 缩写为 `\``, unquote 缩写为 `,`
-
-```
-`(+ 2 ,(* 3 4));; =>  (+ 2 12)
-'(+ 2 ,(* 3 4));; => (+ 2 (unquote (* 3 4)))
-'(+ 2 `(* 3 4));; => (+ 2 (quasiquote (* 3 4)))
-```
-
 
 # list
 若 `(cdr a)` 得到的是一个 `list` 那么 `a` 被称作 *proper list*, 空 list `()` 也是 * proper list * 虽然 `(cdr '())` 会报错. 反之被称作 *improper list*, 例如 `(cons 'a 'b)` 就是一个 *improper list*, 用点号标记(dotted-pair notation) `(a . b)`, `(cdr '(a . b)) => b`
@@ -79,6 +46,45 @@ quasiquote 会将 unquote 求值， quasiquote 缩写为 `\``, unquote 缩写为
 (cddr '(( 1 2 3) 4 5 6)) ;;=> (5, 6)
 (cadr '(( 1 2 3) 4 5 6)) ;;=> 4 ;; 先 d 后 a
 (cdar '(( 1 2 3) 4 5 6)) ;;=> (2 3) ;; 先 a 后 d
+```
+
+# quote
+`quote` 并不是函数调用，它是一种特殊的语法。`quote` 的作用是将代码视作一种程序，便于操作语法树。
+
+对于数字和字符串，在任何情况下都是常量，`quote` 不起任何作用(self-evaluating constants, i.e., numbers, booleans, characters, strings, and bytevectors)
+```
+'2 ;;=> 2
+
+'2/3 ;;=> 2/3
+
+(quote "Hi Mom!") ;;=> "Hi Mom!"
+```
+
+对于 list，得到相应符号的 list
+```
+(quote (a b c d)) ;;=> (a b c d)
+```
+```
+(quote (quote cons)) ;;=> (quote cons)
+(car (quote (quote cons))) ;;=> quote
+```
+在这个例子中, 第二个 `quote` 并不起任何作用, 和任何的 symbol 相同, 因为外层的 `quote` 并不会执行后面的代码.
+
+相应的`(list (a b c d))` 在 a,b,c,d 未定义的情况下会报错
+
+## quasiquote(quasi- 类似的), unquote 与 unquote-splicing
+
+`quasiquote` 会将 `unquote` 和 `unquote-splicing` 求值， `quasiquote` 缩写为 `\``, `unquote` 缩写为 `,`, `unquote-splicing` 缩写为 `,@`. `unquote` 和 `unquote-splicing` 都只能用在 `quasiquote` 中，区别是 `unquote-splicing` 的结果不是一个 `list`
+
+
+```
+`(+ 2 ,(* 3 4));; =>  (+ 2 12)
+'(+ 2 ,(* 3 4));; => (+ 2 (unquote (* 3 4)))
+'(+ 2 `(* 3 4));; => (+ 2 (quasiquote (* 3 4)))
+`(+ ,@(cdr '(* 2 3))) ;; => (+ 2 3)
+`(+ ,(cdr '(* 2 3))) ;; => (+ (2 3))
+`(+ ,@1) ;; => (+ . 1)
+`(+ ,1) ;; => (+ 1)
 ```
 
 # procedure
