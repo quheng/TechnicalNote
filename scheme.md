@@ -305,3 +305,56 @@ If procedure returns normally when passed the continuation procedure, the values
 > 链接：https://www.zhihu.com/question/21954238/answer/23855834
 > 来源：知乎
 > 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+# 等价性
+## eq
+`(eq? obj1 obj2 )`
+
+1. 不同类型的对象不相同
+2. 相同类型的对象内容不同不相等
+3. *#t* 和 *#t* 永远相同，*#f* 依然
+4. 空列表 `()` 永远相同
+5. 两个符号(symbols) 相同，当且仅当名称相同(by string=?),注意是将 `symbols` 的名称按照 `string=?` 的规则判断.
+6. 常量永远和自己相等, 不同时刻创建出来的东西不相等
+7. 由同一个 `lambda` 创建出来的函数和自己相等, 但是同一个 `lambda` 不同时间创建出来的函数可能相等也可能不相等
+```
+(let ([x (* 12345678987654321 2)]) (eq? x x)) ;; => unspecified
+(eq? #\a #\a)  ;; => unspecified
+(eq? '(a) '(a))  ;; => unspecified
+(eq? "abc" "abc")  ;; => unspecified
+(eq? (lambda (x) x) (lambda (y) y)) ;; => unspecified
+```
+
+## eqv
+`(eqv? obj1 obj2 )`
+`eqv` 和 `eq` 类似, 但是保证了字符（char=?）和数字（=）的相等。值得注意的是，`eqv`区分正负和虚数，未定义 NaN。
+`eqv` 相比于 `eq` 不同实现造成的差异更小，但是计算更加昂贵。
+```
+ (= -0.0 +0.0) ;; => #t
+ (eqv? -0.0 +0.0) ;; => #f
+ (eqv? +nan.0 (/ 0.0 0.0)) ;; => unspecified
+ (eqv? 9/2 9/2) ;; => #t
+ (let ([x (* 12345678987654321 2)]) (eq? x x)) ;; => #t
+ (eqv? #\a #\a) ;; => #t
+ (eqv? '(a) '(a)) ;; => unspecified
+ (let ([f (lambda () (lambda (x) x))]) (eqv? (f) (f))) ;; => unspecified
+ (eq? (lambda (x) x) (lambda (y) y)) ;; => unspecified
+```
+
+## equal
+`(equal? obj 1 obj 2 )`
+equal 会循环比较 list 的内容，因此可以死循环
+```
+(equal? '(a) '(a)) ;; => #t
+```
+
+## 类型判断例子
+```
+;; 均为 #t, quote 不起作用
+(vector? '#())
+(vector? '#(a b c))
+(vector? (vector 'a 'b 'c))
+(list? '())
+
+(call/cc procedure?) ;; => true
+```
