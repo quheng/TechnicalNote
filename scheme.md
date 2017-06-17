@@ -360,3 +360,28 @@ equal 会循环比较 list 的内容，因此可以死循环
 
 (call/cc procedure?) ;; => true
 ```
+
+## 多值
+```
+(call-with-values producer consumer)
+```
+例子：
+```
+(call-with-values 
+  (lambda () (values 'bond 'james))
+  (lambda (x y) (cons y x))) ;; => (james . bond)
+```
+
+由于第一个参数经常需要包裹一个 `lambda` ，定义如下语法糖简化：
+```
+(define-syntax with-values
+
+(syntax-rules () [(_ expr consumer) (call-with-values (lambda () expr) consumer)]))
+```
+
+例子:
+```
+(with-values (values 1 2) list) (with-values (split '(1 2 3 4)) ;; => (1 2)
+(lambda (odds evens) evens)) ;; => (2 4)
+(with-values (partition odd? '(1 2 3 4)) (lambda (a b) a)) ;; => (1 3)
+```
