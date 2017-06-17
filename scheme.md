@@ -35,12 +35,14 @@ note: `*` 意思是 0 次以上， `datum` 是 scheme object
 '(a . (b . (c . ()))) ;;=> (a b c)
 ```
 
+可以通过 `set-cdr!` 来构造一个环形 `list`，这样的 `list`也不认为是 *proper list*。
+
 ## car cdr
 `car` Contents of the Address part of Register number 取列表中的第一个
 
 `cdr` Contents of the Decrement part of Register number 取列表中的剩下的
 
-注意, a, d 可以组合使用, 组合方式先右后左
+注意, a, d 可以组合使用, 组合方式从右到左
 ```
 (caar '(( 1 2 3) 4 5 6)) ;;=> 1
 (cddr '(( 1 2 3) 4 5 6)) ;;=> (5, 6)
