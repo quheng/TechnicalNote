@@ -400,3 +400,21 @@ equal 会循环比较 list 的内容，因此可以死循环
 (lambda (odds evens) evens)) ;; => (2 4)
 (with-values (partition odd? '(1 2 3 4)) (lambda (a b) a)) ;; => (1 3)
 ```
+
+# number
+integer -> rational -> real -> complex
+complex 有两种表示方法直角坐标系和极坐标系： `3.2-3/4i`，`1.1@1.764 ;; => -0.21120433517966342+1.0795335700205513i`,
+
+## 精度
+可以用 `exact?` 和 `exact?` 来判断精度
+
+```
+(exact? 3) ;; => #t
+(exact? 1/3) ;; => #t
+(exact? 1+3i) ;; => #t
+
+(exact? 3.0) ;; => #f
+(exact? 2e3) ;; => #f
+(exact? 1@1) ;; => #f
+```
+
