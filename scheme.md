@@ -20,6 +20,8 @@ note: `*` 意思是 0 次以上， `datum` 是 scheme object
 
 
 # list
+
+## proper list
 若 `(cdr a)` 得到的是一个 `list` 那么 `a` 被称作 *proper list*, 空 list `()` 也是 * proper list * 虽然 `(cdr '())` 会报错. 反之被称作 *improper list*, 例如 `(cons 'a 'b)` 就是一个 *improper list*, 用点号标记(dotted-pair notation) `(a . b)`, `(cdr '(a . b)) => b`
 
 两个元素的 *list* 被称作 *pair*
@@ -36,6 +38,19 @@ note: `*` 意思是 0 次以上， `datum` 是 scheme object
 ```
 
 可以通过 `set-cdr!` 来构造一个环形 `list`，这样的 `list`也不认为是 *proper list*。
+
+## association list
+`association list` 指的是每个元素都形如 `(key . value)` 的 `proper list`
+可以用 `(assq obj alist)`,`(assv obj alist)`,`(assoc obj alist)`,`(assp procedure alist)` 进行元素查找
+
+```
+(assq 'b '((a . 1) (b . 2))) ;; => (b . 2)
+(assv 2/3 '((1/3 . 1) (2/3 . 2))) ;; => (2/3 . 2)
+(assv 2/3 '((1/3 . a) (3/4 . b))) ;; => #f
+
+(assoc '(a) '(((a) . a) (-1 . b))) ;; => ((a) . a)
+(assp odd? '((1 . a) (2 . b))) ;; => (1 . a)
+```
 
 ## car cdr
 `car` Contents of the Address part of Register number 取列表中的第一个
