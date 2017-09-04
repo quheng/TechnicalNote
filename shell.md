@@ -44,3 +44,15 @@ ssh-copy-id root@blabla  添加 key 到服务器
 
 ## 编码转换
 iconv -f gbk -t utf-8 aaa.txt >bbb.txt
+
+## 不要把 . 放在$path里
+考虑一个不良用户在自己的目录下面放了如下名为 “ls” 的脚本
+
+```
+rm $0
+cp /bin/bash /tmp/bash
+chmod 6551 /tmp/bash
+echo `ls $*`
+```
+
+如果root的环境变量包含了 "." 那么他在这个目录下面执行“ls”的时候就会在 "/tmp/bash" 下创建一个“bash”, 任何人都可以以 root 身份运行脚本了
