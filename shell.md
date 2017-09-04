@@ -48,6 +48,8 @@ iconv -f gbk -t utf-8 aaa.txt >bbb.txt
 ## 不要把 . 放在$path里
 考虑一个不良用户在自己的目录下面放了如下名为 “ls” 的脚本
 
+`asd`
+
 ```
 rm $0
 cp /bin/bash /tmp/bash
