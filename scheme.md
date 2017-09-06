@@ -436,3 +436,6 @@ complex 有两种表示方法直角坐标系和极坐标系： `3.2-3/4i`，`1.1
 
 # 字符 character
 字符以 `#\` 开头
+
+# tips
+https://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule
