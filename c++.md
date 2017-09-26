@@ -63,7 +63,7 @@ typedef char *cs;
 const char* c = &a;
 const cs d = &a;
 c = &b;
-d = &b;  // 
+d = &b;  // cannot assign to variable 'd' with const-qualified type 'const cs' (aka 'char *const')
 *c = 'b';  //
 *d = 'b';
 ```
