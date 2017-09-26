@@ -30,3 +30,7 @@ int main(int argc, char const *argv[])
 	const int &e = 10;  // OK
 	const int &f = a * 2;  // OK bind to a temporary variabe
 ```
+
+临时量是 *常量*， 不能绑到 non-const lvalue reference，好像合理。。。。。。
+
+
