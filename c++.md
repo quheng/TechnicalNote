@@ -20,3 +20,11 @@ int main(int argc, char const *argv[])
 
 
 ## reference
+```
+	double a {1.0};  // OK
+	int &b = a;  // non-const lvalue reference to type 'int' cannot bind to a value of unrelated type 'double'
+	int &c = 1;  // non-const lvalue reference to type 'int' cannot bind to a temporary of type 'int'
+	const int &d = a;  // OK bind to a temporary variabe
+	const int &e = 10;  // OK
+	const int &f = a * 2;  // OK bind to a temporary variabe
+```
