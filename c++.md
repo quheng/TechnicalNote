@@ -68,6 +68,9 @@ d = &b;  // cannot assign to variable 'd' with const-qualified type 'const cs' (
 *d = 'b';
 ```
 
+typedef 会改变 *基本数据类型* 使得 const 的作用对象改变。
+const char *c； 指向 const char 的指针
+const cs d； 指向 char 的 const 指针
 
 
 
