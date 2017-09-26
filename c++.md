@@ -60,7 +60,7 @@ int main(int argc, char const *argv[])
 char a = 'a';
 char b = 'b';
 typedef char *cs;
-const char* c = &a;
+const char *c = &a;
 const cs d = &a;
 c = &b;
 d = &b;  // cannot assign to variable 'd' with const-qualified type 'const cs' (aka 'char *const')
