@@ -64,7 +64,7 @@ const char* c = &a;
 const cs d = &a;
 c = &b;
 d = &b;  // cannot assign to variable 'd' with const-qualified type 'const cs' (aka 'char *const')
-*c = 'b';  //
+*c = 'b';  // error: read-only variable is not assignable
 *d = 'b';
 ```
 
