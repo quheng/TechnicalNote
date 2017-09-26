@@ -33,4 +33,24 @@ int main(int argc, char const *argv[])
 
 临时量是 *常量*， 不能绑到 non-const lvalue reference，好像合理。。。。。。
 
+## constexpr
+```
+constexpr long long foo(int times) {
+	long long count {0};
+	for (int i = 0; i < times; ++i)
+	{
+		count++;
+
+	}
+	return count;
+}
+
+int main(int argc, char const *argv[])
+{
+	constexpr long long res = foo(500000);
+	printf("%lld\n", res);
+	return 0;
+}
+
+```
 
