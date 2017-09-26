@@ -47,10 +47,10 @@ constexpr long long foo(int times) {
 
 int main(int argc, char const *argv[])
 {
-	constexpr long long res = foo(500000);
+	constexpr long long res = foo(500000); // OK
+	// constexpr long long res = foo(5000000); // 
 	printf("%lld\n", res);
 	return 0;
 }
-
 ```
 
