@@ -54,3 +54,20 @@ int main(int argc, char const *argv[])
 }
 ```
 
+## typedef
+
+```
+char a = 'a';
+char b = 'b';
+typedef char *cs;
+const char* c = &a;
+const cs d = &a;
+c = &b;
+d = &b;  // 
+*c = 'b';  //
+*d = 'b';
+```
+
+
+
+
