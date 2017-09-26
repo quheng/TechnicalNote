@@ -5,7 +5,9 @@
 * [Introduction](README.md)
 
 ## Programing Language
+
 * [Haskell](haskell.md)
+* [C++](c++.md)
 * [Java](java.md)
 * [JavaScript](javascript.md)
 * [Go](go.md)
@@ -13,6 +15,7 @@
 * [RegularExpress](regularexpress.md)
 
 ## Tools
+
 * [Git](git.md)
 * [DynamoDB](dynamodb.md)
 * [Hive](hive.md)
@@ -24,6 +27,7 @@
 * [Ngrok](ngrok.md)
 
 ## Notes
+
 * [CategoryTheory](category-theory.md)
 * [Concurrency](concurrency.md)
 * [Sicp](sicp.md)
