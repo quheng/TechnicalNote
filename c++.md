@@ -59,7 +59,7 @@ int main(int argc, char const *argv[])
 ```
 char a = 'a';
 char b = 'b';
-typedef char *cs;
+typedef char *cs;  // 	using cs = char*;
 const char *c = &a;
 const cs d = &a;
 c = &b;
