@@ -73,4 +73,26 @@ const char *c； 指向 const char 的指针， 基本类型是 char
 const cs d； 指向 char 的 const 指针，基本类型是 char*
 
 
+## array paramater
 
+```
+void foo(int a[10]) {
+	cout << sizeof (a) << " " << sizeof a << endl;
+	// sizeof on array function parameter will return size of
+      'int *' instead of 'int [10]' [-Wsizeof-array-argument]
+      // output is 8(depends on your computer)
+	
+	for (auto item : a) {
+		cout << item << endl;
+	}
+}
+
+int main(int argc, char const *argv[])
+{
+	int b[3] {1, 2, 3};
+	cout << sizeof (b) << " " << sizeof b << endl;
+	foo(b);
+
+	return 0;
+}
+```
