@@ -85,6 +85,9 @@ void foo(int a[10]) {
 	for (auto item : a) {
 		cout << item << endl;
 	}
+	//annot build range expression with array function
+      parameter 'a' since parameter with array type 'int [10]' is treated as
+      pointer type 'int *'
 }
 
 int main(int argc, char const *argv[])
