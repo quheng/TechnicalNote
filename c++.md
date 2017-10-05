@@ -99,3 +99,12 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+void foo(int* a);
+void foo(int a[]);
+void foo(int a[10]);
+的类型相同
+
+
+
+
+
