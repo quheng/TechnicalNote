@@ -24,5 +24,3 @@ test_data = [(1,2), (1,3), (2,2), (2,3)]
 res = list(groupby(test_data, itemgetter(0)))
 
 ```
-
-```
