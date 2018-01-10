@@ -11,6 +11,7 @@
 * [Java](java.md)
 * [JavaScript](javascript.md)
 * [Go](go.md)
+* [Python](python.md)
 * [Scheme](scheme.md)
 * [RegularExpress](regularexpress.md)
 
